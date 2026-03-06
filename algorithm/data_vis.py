@@ -1,8 +1,15 @@
-import mne, time
-from pylsl import StreamInfo, StreamOutlet
+import mne
 import numpy as np
+import time
+from pylsl import StreamInfo, StreamOutlet
+
+import pyqtgraph as pg
+from pyqtgraph.Qt import QtWidgets
+
 def main():
-    raw = mne.io.read_raw_edf("./data", preload=True)
+
+    raw = mne.io.read_raw_edf("./data/19_2_2026_playlist_andrew_raw.edf", preload=True)
+    raw.filter(l_freq=1.0, h_freq=50.0)
     data = raw.get_data()
     sfreq = int(raw.info["sfreq"])
     n_channels = data.shape[0]
@@ -11,17 +18,42 @@ def main():
     outlet = StreamOutlet(info)
 
     chunk_size = 32
-    speed = 10
+    speed = 1
     delay = chunk_size / sfreq * speed
 
+    # ---- GUI setup ----
+    app = QtWidgets.QApplication([])
+    win = pg.GraphicsLayoutWidget(show=True)
+    win.setWindowTitle("EEG Stream Viewer")
+
+    plot = win.addPlot(title="Channel 1")
+    curve = plot.plot()
+
+    buffer = np.zeros(2000)
+
     idx = 0
+
     while idx < data.shape[1]:
+
         chunk = data[:, idx:idx+chunk_size].T
+
+        # send to LSL
         for sample in chunk:
             outlet.push_sample(sample.tolist())
+
+        # update buffer
+        buffer = np.roll(buffer, -chunk_size)
+        buffer[-chunk_size:] = chunk[:,0]
+
+        curve.setData(buffer)
+
+        QtWidgets.QApplication.processEvents()
+
         time.sleep(delay)
-        print(f"Sent chunk starting at: {idx}")
+
         idx += chunk_size
+
+    app.exec()
 
 if __name__ == "__main__":
     main()
