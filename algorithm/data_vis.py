@@ -8,7 +8,7 @@ from pyqtgraph.Qt import QtWidgets
 
 def main():
 
-    raw = mne.io.read_raw_edf("./data/19_2_2026_playlist_andrew_raw.edf", preload=True)
+    raw = mne.io.read_raw_edf("./data/04_2_2026_playlist_Ella_raw.edf", preload=True)
     raw.filter(l_freq=1.0, h_freq=50.0)
     data = raw.get_data()
     sfreq = int(raw.info["sfreq"])
@@ -26,10 +26,20 @@ def main():
     win = pg.GraphicsLayoutWidget(show=True)
     win.setWindowTitle("EEG Stream Viewer")
 
-    plot = win.addPlot(title="Channel 1")
-    curve = plot.plot()
+    # plot = win.addPlot(title="Channel 1")
+    # curve = plot.plot()
+    plots = []
+    curves = []
 
-    buffer = np.zeros(2000)
+    for ch in range(n_channels):
+        p = win.addPlot(title=f"Channel {ch + 1}")
+        c = p.plot()
+        plots.append(p)
+        curves.append(c)
+        win.nextRow()  # stack vertically
+
+    # buffer = np.zeros(2000)
+    buffer = np.zeros((n_channels, 2000))
 
     idx = 0
 
@@ -42,10 +52,14 @@ def main():
             outlet.push_sample(sample.tolist())
 
         # update buffer
-        buffer = np.roll(buffer, -chunk_size)
-        buffer[-chunk_size:] = chunk[:,0]
+        # buffer = np.roll(buffer, -chunk_size)
+        # buffer[-chunk_size:] = chunk[:,0]
+        buffer = np.roll(buffer, -chunk_size, axis=1)
+        buffer[:, -chunk_size:] = chunk.T
 
-        curve.setData(buffer)
+        # curve.setData(buffer)
+        for ch in range(n_channels):
+            curves[ch].setData(buffer[ch])
 
         QtWidgets.QApplication.processEvents()
 
