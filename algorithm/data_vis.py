@@ -63,18 +63,19 @@ def main():
     sfreq = int(raw.info["sfreq"])
     n_channels = data.shape[0]
     print(f"orginal channel names:{raw.info.ch_names}") #this confirms that channel 8 is a trigger
+    print("sampling rate:", sfreq)
 
     # the amount of events and the number associated  as well as name
-    # event_id = {
-    # 'event_type_1': 1,
-    # 'event_type_2': 2,
-    # 'event_type_3': 3,
-    # 'event_type_4': 4,
-    # }
+    event_id = {
+    'event_type_1': 1,
+    'event_type_2': 2,
+    'event_type_3': 3,
+    'event_type_4': 4,
+    }
 
     # ### Reference to Left Ear channel, default is Pz ###
     # data.set_eeg_reference(ref_channels=['EEG LE-Pz'])
-
+    #
     # ### Standardize channel names ###
     # rename_dict = {}
     # for ch_name in data.ch_names:
@@ -84,14 +85,40 @@ def main():
     #         rename_dict[ch_name] = "EEG Pz"
     # data.rename_channels(rename_dict)
     # print(f"Updated channel names: {data.info.ch_names}")
-
+    #
     # ### Preprocess with bandpass ###
     # data.filter(l_freq=0.5, h_freq=50.0, picks="eeg")
 
-    # ### Find events labeled in the Trigger column ###
-    # events = mne.find_events(data, stim_channel='Trigger', min_duration=0.0)
+    ### Find events labeled in the Trigger column ###
+    events = mne.find_events(raw, stim_channel='Trigger', min_duration=0.0)
+
+    ###################
+    # --- Slice data into segments between trigger pairs ---
+    segments = []
+    segment_names = []
+    segment_durations = {}
+
+    # Pair triggers as (1st,2nd), (3rd,4th), (5th,6th), ...
+    for i in range(0, len(events), 2):
+        start_sample = events[i, 0]
+
+        if i + 1 < len(events):
+            end_sample = events[i + 1, 0]
+            name = f"segment_{i//2 + 1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
+
+        segment = data[:, start_sample:end_sample]
+        segments.append(segment)
+        segment_names.append(name)
+        segment_durations[f"segment_{i//2 + 1}"] = f"{(float(end_sample) - float(start_sample))/300:.2f}s"
+
+    print(f"Created {len(segments)} segments")
+    print("Durations of each segment:", segment_durations)
+
+    ######################
+
     # print(f'Found {len(events)} events')
-    # print(f'Event IDs: {set(events[:, 2])}')
+    # print(f'Event IDs: {events}')
+
     print("n_channels: ", n_channels)
     print(f"data shape: {len(data.shape)}")
     info = StreamInfo("FakeEEG", "EEG", n_channels, sfreq, "float32", "fake_eeg_stream")
@@ -106,6 +133,8 @@ def main():
     win = pg.GraphicsLayoutWidget(show=True)
     win.setWindowTitle("EEG Stream Viewer")
 
+    label = win.addLabel(text="Segment: None", row=0, col=0)
+    win.nextRow()
     # plot = win.addPlot(title="Channel 1")
     # curve = plot.plot()
     plots = []
@@ -121,31 +150,56 @@ def main():
     # buffer = np.zeros(2000)
     buffer = np.zeros((n_channels, 2000))
 
-    idx = 0
+    # idx = 0
+    #
+    # while idx < data.shape[1]:
+    #
+    #     chunk = data[:, idx:idx+chunk_size].T
+    #
+    #     # send to LSL
+    #     for sample in chunk:
+    #         outlet.push_sample(sample.tolist())
+    #
+    #     # update buffer
+    #     # buffer = np.roll(buffer, -chunk_size)
+    #     # buffer[-chunk_size:] = chunk[:,0]
+    #     buffer = np.roll(buffer, -chunk_size, axis=1)
+    #     buffer[:, -chunk_size:] = chunk.T
+    #
+    #     # curve.setData(buffer)
+    #     for ch in range(n_channels):
+    #         curves[ch].setData(buffer[ch])
+    #
+    #     QtWidgets.QApplication.processEvents()
+    #
+    #     time.sleep(delay)
+    #
+    #     idx += chunk_size
 
-    while idx < data.shape[1]:
+    for seg_idx, segment in enumerate(segments):
+        label.setText(segment_names[seg_idx])
+        idx = 0
 
-        chunk = data[:, idx:idx+chunk_size].T
+        while idx < segment.shape[1]:
+            chunk = segment[:, idx:idx + chunk_size]
 
-        # send to LSL
-        for sample in chunk:
-            outlet.push_sample(sample.tolist())
+            # send to LSL
+            for sample in chunk.T:
+                outlet.push_sample(sample.tolist())
 
-        # update buffer
-        # buffer = np.roll(buffer, -chunk_size)
-        # buffer[-chunk_size:] = chunk[:,0]
-        buffer = np.roll(buffer, -chunk_size, axis=1)
-        buffer[:, -chunk_size:] = chunk.T
+            # use the actual number of samples in this chunk
+            actual_size = chunk.shape[1]
 
-        # curve.setData(buffer)
-        for ch in range(n_channels):
-            curves[ch].setData(buffer[ch])
+            buffer = np.roll(buffer, -actual_size, axis=1)
+            buffer[:, -actual_size:] = chunk
 
-        QtWidgets.QApplication.processEvents()
+            for ch in range(n_channels):
+                curves[ch].setData(buffer[ch])
 
-        time.sleep(delay)
+            QtWidgets.QApplication.processEvents()
+            time.sleep(delay)
 
-        idx += chunk_size
+            idx += chunk_size
 
     app.exec()
 
