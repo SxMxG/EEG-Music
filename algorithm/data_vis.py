@@ -106,6 +106,10 @@ def main():
         if i + 1 < len(events):
             end_sample = events[i + 1, 0]
             name = f"segment_{i//2 + 1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
+        else:
+            # If there is a final unpaired trigger, slice until the end of the file
+            end_sample = data.shape[1]
+            name = f"segment_{i//2 + 1}_from_trigger_{events[i, 2]}_to_end"
 
         duration = (float(end_sample) - float(start_sample))/300
         if duration > 29.95 and duration < 30.05:
