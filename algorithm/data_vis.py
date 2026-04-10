@@ -66,12 +66,12 @@ def main():
     print("sampling rate:", sfreq)
 
     # the amount of events and the number associated  as well as name
-    event_id = {
-    'event_type_1': 1,
-    'event_type_2': 2,
-    'event_type_3': 3,
-    'event_type_4': 4,
-    }
+    # event_id = {
+    # 'event_type_1': 1,
+    # 'event_type_2': 2,
+    # 'event_type_3': 3,
+    # 'event_type_4': 4,
+    # }
 
     # ### Reference to Left Ear channel, default is Pz ###
     # data.set_eeg_reference(ref_channels=['EEG LE-Pz'])
@@ -96,7 +96,8 @@ def main():
     # --- Slice data into segments between trigger pairs ---
     segments = []
     segment_names = []
-    segment_durations = {}
+    segment_durations = []
+    discarded = []
 
     # Pair triggers as (1st,2nd), (3rd,4th), (5th,6th), ...
     for i in range(0, len(events), 2):
@@ -106,21 +107,29 @@ def main():
             end_sample = events[i + 1, 0]
             name = f"segment_{i//2 + 1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
 
-        segment = data[:, start_sample:end_sample]
-        segments.append(segment)
-        segment_names.append(name)
-        segment_durations[f"segment_{i//2 + 1}"] = f"{(float(end_sample) - float(start_sample))/300:.2f}s"
+        duration = (float(end_sample) - float(start_sample))/300
+        if duration > 29.95 and duration < 30.05:
+            segment = data[:, start_sample:end_sample]
+            segments.append(segment)
+            segment_names.append(name)
+            segment_durations.append(f"segment_{i//2 + 1}: {duration:.2f}s")
+        else:
+            discarded.append(f"segment_{i//2 + 1}: {duration:.2f}s")
 
-    print(f"Created {len(segments)} segments")
-    print("Durations of each segment:", segment_durations)
+    print()
+    print("---SEGMENT INFO---")
+    print(f"Created a total of {len(segments)+len(discarded)} segments with {len(events)} triggers. {len(segments)} segments are used and {len(discarded)} are discarded.")
+    print("Used segments:", segment_durations)
+    print("Discarded segments:", discarded)
+    print()
 
     ######################
 
     # print(f'Found {len(events)} events')
     # print(f'Event IDs: {events}')
 
-    print("n_channels: ", n_channels)
-    print(f"data shape: {len(data.shape)}")
+    # print("n_channels: ", n_channels)
+    # print(f"data shape: {len(data.shape)}")
     info = StreamInfo("FakeEEG", "EEG", n_channels, sfreq, "float32", "fake_eeg_stream")
     outlet = StreamOutlet(info)
 
