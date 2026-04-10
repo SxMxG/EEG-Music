@@ -12,7 +12,7 @@ from pathlib import Path
 
 def pick_edf_file(base_dir="."):
     # 1. Check for 'data' folder, then 'algorithm/data'
-    base_path = Path(base_path)
+    base_path = Path(base_dir)
     data_path = base_path / "data"
     if not data_path.exists():
         data_path = Path(base_dir) / "algorithm" / "data"
@@ -92,7 +92,8 @@ def main():
     # events = mne.find_events(data, stim_channel='Trigger', min_duration=0.0)
     # print(f'Found {len(events)} events')
     # print(f'Event IDs: {set(events[:, 2])}')
-
+    print("n_channels: ", n_channels)
+    print(f"data shape: {len(data.shape)}")
     info = StreamInfo("FakeEEG", "EEG", n_channels, sfreq, "float32", "fake_eeg_stream")
     outlet = StreamOutlet(info)
 
