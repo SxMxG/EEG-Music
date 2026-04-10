@@ -59,6 +59,10 @@ def pick_edf_file(base_dir="."):
 def main():
     datapath = pick_edf_file()
     raw = mne.io.read_raw_edf(datapath, preload=True)
+    ### Find events labeled in the Trigger column ###
+    events = mne.find_events(raw, stim_channel='Trigger', min_duration=0.0)
+    raw.set_eeg_reference(ref_channels=['EEG LE-Pz'])
+    raw.filter(l_freq=0.5, h_freq=50.0, picks="eeg")
     data = raw.get_data()
     sfreq = int(raw.info["sfreq"])
     n_channels = data.shape[0]
@@ -74,7 +78,7 @@ def main():
     # }
 
     # ### Reference to Left Ear channel, default is Pz ###
-    # data.set_eeg_reference(ref_channels=['EEG LE-Pz'])
+    
     #
     # ### Standardize channel names ###
     # rename_dict = {}
@@ -89,8 +93,7 @@ def main():
     # ### Preprocess with bandpass ###
     # data.filter(l_freq=0.5, h_freq=50.0, picks="eeg")
 
-    ### Find events labeled in the Trigger column ###
-    events = mne.find_events(raw, stim_channel='Trigger', min_duration=0.0)
+   
 
     ###################
     # --- Slice data into segments between trigger pairs ---
