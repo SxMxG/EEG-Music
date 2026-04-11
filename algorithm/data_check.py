@@ -55,7 +55,7 @@ def compare(events,data,log):
         name = f"segment_{i+1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
         
         duration = (float(end_sample) - float(start_sample)) / 300
-        if duration > 29.95 and duration < 30.05:
+        if duration > 29 and duration < 34:
             segment = data[:, start_sample:end_sample]
             segments.append(segment)
             segment_names.append(name)
@@ -127,9 +127,18 @@ def main():
                         trigger_end = round_events[i + 1][2]
                         name = f"round_{round_idx+1}_segment_{i//2+1}_trigger_{trigger_start}_to_{trigger_end}"
                     else:
-                        # Unpaired final trigger in this round - skip it
-                        end_sample = data.shape[1]
-                        name = f"round_{round_idx+1}_segment_{i//2+1}_trigger_{trigger_start}_to_session_end"
+                        end_sample = start_sample + 30 * sfreq
+                        name = f"round_{round_idx+1}_segment_{i//2+1}_trigger_{trigger_start}_to_plus_30s"
+                        
+                        if round_idx + 1 < len(rounds):
+                            next_round_start = rounds[round_idx + 1][0][0]
+                            gap = (next_round_start - start_sample) / sfreq
+                            if next_round_start < end_sample:
+                                p(f"  WARNING: trigger_{trigger_start}+30s overlaps next round "
+                                f"(next round starts {gap:.2f}s after trigger_{trigger_start}, cutting there)")
+                                end_sample = next_round_start
+                            else:
+                                p(f"  OK: next round starts {gap:.2f}s after trigger_{trigger_start}, 30s window is clean")
 
                     duration = (float(end_sample) - float(start_sample)) / sfreq
                     if 29 < duration < 31:  # accepts both ~30s and ~32s recordings
@@ -145,12 +154,12 @@ def main():
             p("Used segments:", segment_durations)
             p("Discarded segments:", discarded)
             total_seg += len(segments)
-            if(len(segments) + len(discarded) == 20):
+            if(len(segments) == 20):
                 songs20.append(edf)
             p("comparing to just one after the other-----")
             compare(events,data,log)
 
-        p(f'Perfect data files: {songs20}')
+        p(f'Perfect data files: {[str(f) for f in songs20]}')
         p(f"\nTotal events across all files: {total_events}")
         p(f"Total usable segments: {total_seg}")
 

@@ -2,17 +2,19 @@
 Ella 4/02/2026
 Found 38 events, sfreq=300
 Detected 3 rounds with sizes: [15, 15, 8]
+  OK: next round starts 158.00s after trigger_15, 30s window is clean
+  OK: next round starts 54.20s after trigger_15, 30s window is clean
 
 ---SEGMENT INFO---
-Created a total of 20 segments with 38 triggers. 18 used, 2 discarded.
-Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.01s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.01s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.01s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
-Discarded segments: ['round_1_segment_8_trigger_15_to_round2_begin: 1076.18s', 'round_2_segment_8_trigger_15_to_round2_begin: 474.58s']
+Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
+Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.01s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.01s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.01s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
+Discarded segments: []
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 37 segments with 38 triggers. 18 used, 19 discarded.
-Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_11_from_trigger_11_to_12: 30.01s', 'segment_13_from_trigger_13_to_14: 30.00s', 'segment_16_from_trigger_1_to_2: 30.00s', 'segment_18_from_trigger_3_to_4: 30.00s', 'segment_20_from_trigger_5_to_6: 30.00s', 'segment_22_from_trigger_7_to_8: 30.00s', 'segment_24_from_trigger_9_to_10: 30.00s', 'segment_26_from_trigger_11_to_12: 30.00s', 'segment_28_from_trigger_13_to_14: 30.01s', 'segment_31_from_trigger_1_to_2: 30.00s', 'segment_33_from_trigger_3_to_4: 30.00s', 'segment_35_from_trigger_5_to_6: 30.01s', 'segment_37_from_trigger_7_to_8: 30.00s']
-Discarded segments: ['segment_2_from_trigger_2_to_3: 50.79s', 'segment_4_from_trigger_4_to_5: 35.59s', 'segment_6_from_trigger_6_to_7: 63.07s', 'segment_8_from_trigger_8_to_9: 27.91s', 'segment_10_from_trigger_10_to_11: 56.53s', 'segment_12_from_trigger_12_to_13: 147.01s', 'segment_14_from_trigger_14_to_15: 25.98s', 'segment_15_from_trigger_15_to_1: 158.00s', 'segment_17_from_trigger_2_to_3: 32.88s', 'segment_19_from_trigger_4_to_5: 46.35s', 'segment_21_from_trigger_6_to_7: 21.18s', 'segment_23_from_trigger_8_to_9: 21.66s', 'segment_25_from_trigger_10_to_11: 22.44s', 'segment_27_from_trigger_12_to_13: 55.25s', 'segment_29_from_trigger_14_to_15: 33.82s', 'segment_30_from_trigger_15_to_1: 54.20s', 'segment_32_from_trigger_2_to_3: 23.47s', 'segment_34_from_trigger_4_to_5: 19.81s', 'segment_36_from_trigger_6_to_7: 69.79s']
+Created a total of 37 segments with 38 triggers. 20 used, 17 discarded.
+Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_11_from_trigger_11_to_12: 30.01s', 'segment_13_from_trigger_13_to_14: 30.00s', 'segment_16_from_trigger_1_to_2: 30.00s', 'segment_17_from_trigger_2_to_3: 32.88s', 'segment_18_from_trigger_3_to_4: 30.00s', 'segment_20_from_trigger_5_to_6: 30.00s', 'segment_22_from_trigger_7_to_8: 30.00s', 'segment_24_from_trigger_9_to_10: 30.00s', 'segment_26_from_trigger_11_to_12: 30.00s', 'segment_28_from_trigger_13_to_14: 30.01s', 'segment_29_from_trigger_14_to_15: 33.82s', 'segment_31_from_trigger_1_to_2: 30.00s', 'segment_33_from_trigger_3_to_4: 30.00s', 'segment_35_from_trigger_5_to_6: 30.01s', 'segment_37_from_trigger_7_to_8: 30.00s']
+Discarded segments: ['segment_2_from_trigger_2_to_3: 50.79s', 'segment_4_from_trigger_4_to_5: 35.59s', 'segment_6_from_trigger_6_to_7: 63.07s', 'segment_8_from_trigger_8_to_9: 27.91s', 'segment_10_from_trigger_10_to_11: 56.53s', 'segment_12_from_trigger_12_to_13: 147.01s', 'segment_14_from_trigger_14_to_15: 25.98s', 'segment_15_from_trigger_15_to_1: 158.00s', 'segment_19_from_trigger_4_to_5: 46.35s', 'segment_21_from_trigger_6_to_7: 21.18s', 'segment_23_from_trigger_8_to_9: 21.66s', 'segment_25_from_trigger_10_to_11: 22.44s', 'segment_27_from_trigger_12_to_13: 55.25s', 'segment_30_from_trigger_15_to_1: 54.20s', 'segment_32_from_trigger_2_to_3: 23.47s', 'segment_34_from_trigger_4_to_5: 19.81s', 'segment_36_from_trigger_6_to_7: 69.79s']
 
 Yichen #02 3/04/2026
 Found 3 events, sfreq=300
@@ -20,15 +22,15 @@ Detected 1 rounds with sizes: [3]
 Note: odd number of triggers (3) - last trigger in a round will be unpaired
 
 ---SEGMENT INFO---
-Created a total of 2 segments with 3 triggers. 0 used, 2 discarded.
-Used segments: []
-Discarded segments: ['round_1_segment_1_trigger_4_to_5: 32.46s', 'round_1_segment_2_trigger_6_to_round2_begin: 3.31s']
+Created a total of 2 segments with 3 triggers. 1 used, 1 discarded.
+Used segments: ['round_1_segment_2_trigger_6_to_plus_30s: 30.00s']
+Discarded segments: ['round_1_segment_1_trigger_4_to_5: 32.46s']
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 2 segments with 3 triggers. 0 used, 2 discarded.
-Used segments: []
-Discarded segments: ['segment_1_from_trigger_4_to_5: 32.46s', 'segment_2_from_trigger_5_to_6: 31.26s']
+Created a total of 2 segments with 3 triggers. 2 used, 0 discarded.
+Used segments: ['segment_1_from_trigger_4_to_5: 32.46s', 'segment_2_from_trigger_5_to_6: 31.26s']
+Discarded segments: []
 
 Yichen #03 3/04/2026
 Found 18 events, sfreq=300
@@ -41,9 +43,9 @@ Discarded segments: ['round_1_segment_1_trigger_8_to_9: 32.72s', 'round_1_segmen
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 17 segments with 18 triggers. 0 used, 17 discarded.
-Used segments: []
-Discarded segments: ['segment_1_from_trigger_8_to_9: 32.72s', 'segment_2_from_trigger_9_to_10: 33.45s', 'segment_3_from_trigger_10_to_11: 30.92s', 'segment_4_from_trigger_11_to_12: 32.13s', 'segment_5_from_trigger_12_to_13: 31.31s', 'segment_6_from_trigger_13_to_14: 31.81s', 'segment_7_from_trigger_14_to_15: 32.60s', 'segment_8_from_trigger_15_to_1: 63.35s', 'segment_9_from_trigger_1_to_2: 31.58s', 'segment_10_from_trigger_2_to_3: 32.63s', 'segment_11_from_trigger_3_to_4: 32.47s', 'segment_12_from_trigger_4_to_5: 30.17s', 'segment_13_from_trigger_5_to_6: 32.17s', 'segment_14_from_trigger_6_to_7: 31.77s', 'segment_15_from_trigger_7_to_8: 32.03s', 'segment_16_from_trigger_8_to_9: 32.09s', 'segment_17_from_trigger_9_to_10: 32.61s']
+Created a total of 17 segments with 18 triggers. 16 used, 1 discarded.
+Used segments: ['segment_1_from_trigger_8_to_9: 32.72s', 'segment_2_from_trigger_9_to_10: 33.45s', 'segment_3_from_trigger_10_to_11: 30.92s', 'segment_4_from_trigger_11_to_12: 32.13s', 'segment_5_from_trigger_12_to_13: 31.31s', 'segment_6_from_trigger_13_to_14: 31.81s', 'segment_7_from_trigger_14_to_15: 32.60s', 'segment_9_from_trigger_1_to_2: 31.58s', 'segment_10_from_trigger_2_to_3: 32.63s', 'segment_11_from_trigger_3_to_4: 32.47s', 'segment_12_from_trigger_4_to_5: 30.17s', 'segment_13_from_trigger_5_to_6: 32.17s', 'segment_14_from_trigger_6_to_7: 31.77s', 'segment_15_from_trigger_7_to_8: 32.03s', 'segment_16_from_trigger_8_to_9: 32.09s', 'segment_17_from_trigger_9_to_10: 32.61s']
+Discarded segments: ['segment_8_from_trigger_15_to_1: 63.35s']
 
 Yichen 3/04/2026
 Found 1 events, sfreq=300
@@ -51,9 +53,9 @@ Detected 1 rounds with sizes: [1]
 Note: odd number of triggers (1) - last trigger in a round will be unpaired
 
 ---SEGMENT INFO---
-Created a total of 1 segments with 1 triggers. 0 used, 1 discarded.
-Used segments: []
-Discarded segments: ['round_1_segment_1_trigger_2_to_round2_begin: 14.85s']
+Created a total of 1 segments with 1 triggers. 1 used, 0 discarded.
+Used segments: ['round_1_segment_1_trigger_2_to_plus_30s: 30.00s']
+Discarded segments: []
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
@@ -90,9 +92,9 @@ Discarded segments: ['round_1_segment_1_trigger_3_to_4: 32.46s']
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 3 segments with 4 triggers. 0 used, 3 discarded.
-Used segments: []
-Discarded segments: ['segment_1_from_trigger_3_to_4: 32.46s', 'segment_2_from_trigger_4_to_5: 29.89s', 'segment_3_from_trigger_5_to_6: 30.87s']
+Created a total of 3 segments with 4 triggers. 3 used, 0 discarded.
+Used segments: ['segment_1_from_trigger_3_to_4: 32.46s', 'segment_2_from_trigger_4_to_5: 29.89s', 'segment_3_from_trigger_5_to_6: 30.87s']
+Discarded segments: []
 
 Ella #01 3/11/2026
 Found 1 events, sfreq=300
@@ -100,9 +102,9 @@ Detected 1 rounds with sizes: [1]
 Note: odd number of triggers (1) - last trigger in a round will be unpaired
 
 ---SEGMENT INFO---
-Created a total of 1 segments with 1 triggers. 0 used, 1 discarded.
-Used segments: []
-Discarded segments: ['round_1_segment_1_trigger_1_to_round2_begin: 6.62s']
+Created a total of 1 segments with 1 triggers. 1 used, 0 discarded.
+Used segments: ['round_1_segment_1_trigger_1_to_plus_30s: 30.00s']
+Discarded segments: []
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
@@ -116,15 +118,15 @@ Detected 1 rounds with sizes: [15]
 Note: odd number of triggers (15) - last trigger in a round will be unpaired
 
 ---SEGMENT INFO---
-Created a total of 8 segments with 15 triggers. 7 used, 1 discarded.
-Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.01s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.01s']
-Discarded segments: ['round_1_segment_8_trigger_15_to_round2_begin: 39.32s']
+Created a total of 8 segments with 15 triggers. 8 used, 0 discarded.
+Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.01s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.01s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s']
+Discarded segments: []
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 14 segments with 15 triggers. 7 used, 7 discarded.
-Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_7_from_trigger_7_to_8: 30.01s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_11_from_trigger_11_to_12: 30.00s', 'segment_13_from_trigger_13_to_14: 30.01s']
-Discarded segments: ['segment_2_from_trigger_2_to_3: 13.12s', 'segment_4_from_trigger_4_to_5: 9.15s', 'segment_6_from_trigger_6_to_7: 5.20s', 'segment_8_from_trigger_8_to_9: 6.44s', 'segment_10_from_trigger_10_to_11: 22.40s', 'segment_12_from_trigger_12_to_13: 6.58s', 'segment_14_from_trigger_14_to_15: 29.26s']
+Created a total of 14 segments with 15 triggers. 8 used, 6 discarded.
+Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_7_from_trigger_7_to_8: 30.01s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_11_from_trigger_11_to_12: 30.00s', 'segment_13_from_trigger_13_to_14: 30.01s', 'segment_14_from_trigger_14_to_15: 29.26s']
+Discarded segments: ['segment_2_from_trigger_2_to_3: 13.12s', 'segment_4_from_trigger_4_to_5: 9.15s', 'segment_6_from_trigger_6_to_7: 5.20s', 'segment_8_from_trigger_8_to_9: 6.44s', 'segment_10_from_trigger_10_to_11: 22.40s', 'segment_12_from_trigger_12_to_13: 6.58s']
 
 Joonha #01 3/11/2026
 Found 11 events, sfreq=300
@@ -132,15 +134,15 @@ Detected 1 rounds with sizes: [11]
 Note: odd number of triggers (11) - last trigger in a round will be unpaired
 
 ---SEGMENT INFO---
-Created a total of 6 segments with 11 triggers. 2 used, 4 discarded.
-Used segments: ['round_1_segment_2_trigger_3_to_4: 29.04s', 'round_1_segment_3_trigger_5_to_6: 30.93s']
-Discarded segments: ['round_1_segment_1_trigger_1_to_2: 31.07s', 'round_1_segment_4_trigger_7_to_8: 31.23s', 'round_1_segment_5_trigger_9_to_10: 31.00s', 'round_1_segment_6_trigger_11_to_round2_begin: 11.71s']
+Created a total of 6 segments with 11 triggers. 3 used, 3 discarded.
+Used segments: ['round_1_segment_2_trigger_3_to_4: 29.04s', 'round_1_segment_3_trigger_5_to_6: 30.93s', 'round_1_segment_6_trigger_11_to_plus_30s: 30.00s']
+Discarded segments: ['round_1_segment_1_trigger_1_to_2: 31.07s', 'round_1_segment_4_trigger_7_to_8: 31.23s', 'round_1_segment_5_trigger_9_to_10: 31.00s']
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 10 segments with 11 triggers. 0 used, 10 discarded.
-Used segments: []
-Discarded segments: ['segment_1_from_trigger_1_to_2: 31.07s', 'segment_2_from_trigger_2_to_3: 31.61s', 'segment_3_from_trigger_3_to_4: 29.04s', 'segment_4_from_trigger_4_to_5: 30.94s', 'segment_5_from_trigger_5_to_6: 30.93s', 'segment_6_from_trigger_6_to_7: 30.75s', 'segment_7_from_trigger_7_to_8: 31.23s', 'segment_8_from_trigger_8_to_9: 31.23s', 'segment_9_from_trigger_9_to_10: 31.00s', 'segment_10_from_trigger_10_to_11: 30.70s']
+Created a total of 10 segments with 11 triggers. 10 used, 0 discarded.
+Used segments: ['segment_1_from_trigger_1_to_2: 31.07s', 'segment_2_from_trigger_2_to_3: 31.61s', 'segment_3_from_trigger_3_to_4: 29.04s', 'segment_4_from_trigger_4_to_5: 30.94s', 'segment_5_from_trigger_5_to_6: 30.93s', 'segment_6_from_trigger_6_to_7: 30.75s', 'segment_7_from_trigger_7_to_8: 31.23s', 'segment_8_from_trigger_8_to_9: 31.23s', 'segment_9_from_trigger_9_to_10: 31.00s', 'segment_10_from_trigger_10_to_11: 30.70s']
+Discarded segments: []
 
 Joonha #02 3/11/2026
 Found 12 events, sfreq=300
@@ -153,9 +155,9 @@ Discarded segments: ['round_1_segment_1_trigger_1_to_2: 31.21s', 'round_1_segmen
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 11 segments with 12 triggers. 0 used, 11 discarded.
-Used segments: []
-Discarded segments: ['segment_1_from_trigger_1_to_2: 31.21s', 'segment_2_from_trigger_2_to_3: 30.70s', 'segment_3_from_trigger_3_to_4: 10.04s', 'segment_4_from_trigger_4_to_5: 19.73s', 'segment_5_from_trigger_5_to_6: 30.44s', 'segment_6_from_trigger_6_to_7: 31.08s', 'segment_7_from_trigger_7_to_8: 31.86s', 'segment_8_from_trigger_8_to_9: 30.64s', 'segment_9_from_trigger_9_to_10: 30.62s', 'segment_10_from_trigger_10_to_11: 30.16s', 'segment_11_from_trigger_11_to_12: 31.03s']
+Created a total of 11 segments with 12 triggers. 9 used, 2 discarded.
+Used segments: ['segment_1_from_trigger_1_to_2: 31.21s', 'segment_2_from_trigger_2_to_3: 30.70s', 'segment_5_from_trigger_5_to_6: 30.44s', 'segment_6_from_trigger_6_to_7: 31.08s', 'segment_7_from_trigger_7_to_8: 31.86s', 'segment_8_from_trigger_8_to_9: 30.64s', 'segment_9_from_trigger_9_to_10: 30.62s', 'segment_10_from_trigger_10_to_11: 30.16s', 'segment_11_from_trigger_11_to_12: 31.03s']
+Discarded segments: ['segment_3_from_trigger_3_to_4: 10.04s', 'segment_4_from_trigger_4_to_5: 19.73s']
 
 andrew 2/19/2026
 Zero triggers found
@@ -163,17 +165,19 @@ Zero triggers found
 Yichen #01 3/25/2026
 Found 38 events, sfreq=300
 Detected 3 rounds with sizes: [15, 15, 8]
+  OK: next round starts 57.91s after trigger_15, 30s window is clean
+  OK: next round starts 67.74s after trigger_15, 30s window is clean
 
 ---SEGMENT INFO---
-Created a total of 20 segments with 38 triggers. 18 used, 2 discarded.
-Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 29.99s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.01s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
-Discarded segments: ['round_1_segment_8_trigger_15_to_round2_begin: 812.53s', 'round_2_segment_8_trigger_15_to_round2_begin: 305.74s']
+Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
+Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 29.99s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.01s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
+Discarded segments: []
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 37 segments with 38 triggers. 18 used, 19 discarded.
-Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_11_from_trigger_11_to_12: 29.99s', 'segment_13_from_trigger_13_to_14: 30.00s', 'segment_16_from_trigger_1_to_2: 30.00s', 'segment_18_from_trigger_3_to_4: 30.00s', 'segment_20_from_trigger_5_to_6: 30.00s', 'segment_22_from_trigger_7_to_8: 30.01s', 'segment_24_from_trigger_9_to_10: 30.00s', 'segment_26_from_trigger_11_to_12: 30.00s', 'segment_28_from_trigger_13_to_14: 30.00s', 'segment_31_from_trigger_1_to_2: 30.00s', 'segment_33_from_trigger_3_to_4: 30.00s', 'segment_35_from_trigger_5_to_6: 30.00s', 'segment_37_from_trigger_7_to_8: 30.00s']
-Discarded segments: ['segment_2_from_trigger_2_to_3: 40.48s', 'segment_4_from_trigger_4_to_5: 39.44s', 'segment_6_from_trigger_6_to_7: 22.33s', 'segment_8_from_trigger_8_to_9: 31.18s', 'segment_10_from_trigger_10_to_11: 46.15s', 'segment_12_from_trigger_12_to_13: 29.35s', 'segment_14_from_trigger_14_to_15: 47.82s', 'segment_15_from_trigger_15_to_1: 57.91s', 'segment_17_from_trigger_2_to_3: 59.49s', 'segment_19_from_trigger_4_to_5: 26.16s', 'segment_21_from_trigger_6_to_7: 18.20s', 'segment_23_from_trigger_8_to_9: 19.57s', 'segment_25_from_trigger_10_to_11: 56.97s', 'segment_27_from_trigger_12_to_13: 35.81s', 'segment_29_from_trigger_14_to_15: 22.67s', 'segment_30_from_trigger_15_to_1: 67.74s', 'segment_32_from_trigger_2_to_3: 36.03s', 'segment_34_from_trigger_4_to_5: 26.36s', 'segment_36_from_trigger_6_to_7: 39.51s']
+Created a total of 37 segments with 38 triggers. 20 used, 17 discarded.
+Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_8_from_trigger_8_to_9: 31.18s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_11_from_trigger_11_to_12: 29.99s', 'segment_12_from_trigger_12_to_13: 29.35s', 'segment_13_from_trigger_13_to_14: 30.00s', 'segment_16_from_trigger_1_to_2: 30.00s', 'segment_18_from_trigger_3_to_4: 30.00s', 'segment_20_from_trigger_5_to_6: 30.00s', 'segment_22_from_trigger_7_to_8: 30.01s', 'segment_24_from_trigger_9_to_10: 30.00s', 'segment_26_from_trigger_11_to_12: 30.00s', 'segment_28_from_trigger_13_to_14: 30.00s', 'segment_31_from_trigger_1_to_2: 30.00s', 'segment_33_from_trigger_3_to_4: 30.00s', 'segment_35_from_trigger_5_to_6: 30.00s', 'segment_37_from_trigger_7_to_8: 30.00s']
+Discarded segments: ['segment_2_from_trigger_2_to_3: 40.48s', 'segment_4_from_trigger_4_to_5: 39.44s', 'segment_6_from_trigger_6_to_7: 22.33s', 'segment_10_from_trigger_10_to_11: 46.15s', 'segment_14_from_trigger_14_to_15: 47.82s', 'segment_15_from_trigger_15_to_1: 57.91s', 'segment_17_from_trigger_2_to_3: 59.49s', 'segment_19_from_trigger_4_to_5: 26.16s', 'segment_21_from_trigger_6_to_7: 18.20s', 'segment_23_from_trigger_8_to_9: 19.57s', 'segment_25_from_trigger_10_to_11: 56.97s', 'segment_27_from_trigger_12_to_13: 35.81s', 'segment_29_from_trigger_14_to_15: 22.67s', 'segment_30_from_trigger_15_to_1: 67.74s', 'segment_32_from_trigger_2_to_3: 36.03s', 'segment_34_from_trigger_4_to_5: 26.36s', 'segment_36_from_trigger_6_to_7: 39.51s']
 
 Andrew 3/26/2026
 Zero triggers found
@@ -181,18 +185,20 @@ Zero triggers found
 Tina 3/26/2026
 Found 38 events, sfreq=300
 Detected 3 rounds with sizes: [15, 15, 8]
+  OK: next round starts 54.34s after trigger_15, 30s window is clean
+  OK: next round starts 54.55s after trigger_15, 30s window is clean
 
 ---SEGMENT INFO---
-Created a total of 20 segments with 38 triggers. 18 used, 2 discarded.
-Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.01s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 29.88s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 29.99s', 'round_2_segment_3_trigger_5_to_6: 30.01s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 29.99s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
-Discarded segments: ['round_1_segment_8_trigger_15_to_round2_begin: 824.77s', 'round_2_segment_8_trigger_15_to_round2_begin: 292.93s']
+Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
+Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.01s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 29.88s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 29.99s', 'round_2_segment_3_trigger_5_to_6: 30.01s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 29.99s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
+Discarded segments: []
 comparing to just one after the other-----
 
 ---SEGMENT INFO---
-Created a total of 37 segments with 38 triggers. 17 used, 20 discarded.
-Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.01s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_11_from_trigger_11_to_12: 30.00s', 'segment_13_from_trigger_13_to_14: 30.00s', 'segment_16_from_trigger_1_to_2: 30.00s', 'segment_18_from_trigger_3_to_4: 29.99s', 'segment_20_from_trigger_5_to_6: 30.01s', 'segment_22_from_trigger_7_to_8: 30.00s', 'segment_24_from_trigger_9_to_10: 30.00s', 'segment_26_from_trigger_11_to_12: 29.99s', 'segment_28_from_trigger_13_to_14: 30.00s', 'segment_31_from_trigger_1_to_2: 30.00s', 'segment_33_from_trigger_3_to_4: 30.00s', 'segment_35_from_trigger_5_to_6: 30.00s', 'segment_37_from_trigger_7_to_8: 30.00s']
-Discarded segments: ['segment_2_from_trigger_2_to_3: 26.96s', 'segment_4_from_trigger_4_to_5: 24.83s', 'segment_6_from_trigger_6_to_7: 38.88s', 'segment_8_from_trigger_8_to_9: 17.46s', 'segment_9_from_trigger_9_to_10: 29.88s', 'segment_10_from_trigger_10_to_11: 23.64s', 'segment_12_from_trigger_12_to_13: 25.16s', 'segment_14_from_trigger_14_to_15: 19.57s', 'segment_15_from_trigger_15_to_1: 54.34s', 'segment_17_from_trigger_2_to_3: 50.73s', 'segment_19_from_trigger_4_to_5: 34.95s', 'segment_21_from_trigger_6_to_7: 36.39s', 'segment_23_from_trigger_8_to_9: 46.59s', 'segment_25_from_trigger_10_to_11: 25.33s', 'segment_27_from_trigger_12_to_13: 51.01s', 'segment_29_from_trigger_14_to_15: 22.49s', 'segment_30_from_trigger_15_to_1: 54.55s', 'segment_32_from_trigger_2_to_3: 35.31s', 'segment_34_from_trigger_4_to_5: 22.71s', 'segment_36_from_trigger_6_to_7: 44.73s']
-Perfect data files: [WindowsPath('algorithm/data/04_2_2026_playlist_Ella_raw.edf'), WindowsPath('algorithm/data/25_3_2026_playlist_Yichen_01_raw.edf'), WindowsPath('algorithm/data/26_3_2026_playlist_Tina__raw.edf')]
+Created a total of 37 segments with 38 triggers. 18 used, 19 discarded.
+Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_5_from_trigger_5_to_6: 30.01s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_9_from_trigger_9_to_10: 29.88s', 'segment_11_from_trigger_11_to_12: 30.00s', 'segment_13_from_trigger_13_to_14: 30.00s', 'segment_16_from_trigger_1_to_2: 30.00s', 'segment_18_from_trigger_3_to_4: 29.99s', 'segment_20_from_trigger_5_to_6: 30.01s', 'segment_22_from_trigger_7_to_8: 30.00s', 'segment_24_from_trigger_9_to_10: 30.00s', 'segment_26_from_trigger_11_to_12: 29.99s', 'segment_28_from_trigger_13_to_14: 30.00s', 'segment_31_from_trigger_1_to_2: 30.00s', 'segment_33_from_trigger_3_to_4: 30.00s', 'segment_35_from_trigger_5_to_6: 30.00s', 'segment_37_from_trigger_7_to_8: 30.00s']
+Discarded segments: ['segment_2_from_trigger_2_to_3: 26.96s', 'segment_4_from_trigger_4_to_5: 24.83s', 'segment_6_from_trigger_6_to_7: 38.88s', 'segment_8_from_trigger_8_to_9: 17.46s', 'segment_10_from_trigger_10_to_11: 23.64s', 'segment_12_from_trigger_12_to_13: 25.16s', 'segment_14_from_trigger_14_to_15: 19.57s', 'segment_15_from_trigger_15_to_1: 54.34s', 'segment_17_from_trigger_2_to_3: 50.73s', 'segment_19_from_trigger_4_to_5: 34.95s', 'segment_21_from_trigger_6_to_7: 36.39s', 'segment_23_from_trigger_8_to_9: 46.59s', 'segment_25_from_trigger_10_to_11: 25.33s', 'segment_27_from_trigger_12_to_13: 51.01s', 'segment_29_from_trigger_14_to_15: 22.49s', 'segment_30_from_trigger_15_to_1: 54.55s', 'segment_32_from_trigger_2_to_3: 35.31s', 'segment_34_from_trigger_4_to_5: 22.71s', 'segment_36_from_trigger_6_to_7: 44.73s']
+Perfect data files: ['algorithm\\data\\04_2_2026_playlist_Ella_raw.edf', 'algorithm\\data\\25_3_2026_playlist_Yichen_01_raw.edf', 'algorithm\\data\\26_3_2026_playlist_Tina__raw.edf']
 
 Total events across all files: 181
-Total usable segments: 67
+Total usable segments: 78
