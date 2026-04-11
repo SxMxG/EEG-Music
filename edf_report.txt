@@ -201,4 +201,4 @@ Discarded segments: ['segment_2_from_trigger_2_to_3: 26.96s', 'segment_4_from_tr
 Perfect data files: ['algorithm\\data\\04_2_2026_playlist_Ella_raw.edf', 'algorithm\\data\\25_3_2026_playlist_Yichen_01_raw.edf', 'algorithm\\data\\26_3_2026_playlist_Tina__raw.edf']
 
 Total events across all files: 181
-Total usable segments: 78
+Total usable songs: 78

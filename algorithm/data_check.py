@@ -161,7 +161,7 @@ def main():
 
         p(f'Perfect data files: {[str(f) for f in songs20]}')
         p(f"\nTotal events across all files: {total_events}")
-        p(f"Total usable segments: {total_seg}")
+        p(f"Total usable songs: {total_seg}")
 
 if __name__ == "__main__":
     main()
