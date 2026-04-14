@@ -56,10 +56,35 @@ def compare(events, data, log, sfreq=300):
     for i in range(0, len(events) - 1):  # all except last
         start_sample = events[i, 0]
         end_sample = events[i + 1, 0]
-        name = f"segment_{i+1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
+        name = f"segment_{len(segments)+1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
         
+            
         duration = (float(end_sample) - float(start_sample)) / sfreq
-        if 29 < duration < 34:
+        if(events[i,2] == 15 and events[i+1,2] == 1 and duration > 30):
+            songs2 = duration > 60
+            write("restart round so lost a trigger")
+            end_sample = start_sample + 30 * sfreq
+            duration = (float(end_sample) - float(start_sample)) / sfreq
+            segment = data[:,start_sample:end_sample]
+            segments.append(segment)
+            name = f"segment_{i+1}_from_trigger_{events[i, 2]}_to_30s_plus"
+            segment_names.append(name)
+            segment_durations.append(f"{name}:{duration:.2f}")
+            if(songs2):
+                write("found duration for 2 songs so splicing")
+                start_sample = end_sample
+                end_sample = start_sample + 30 * sfreq
+                duration = (float(end_sample) - float(start_sample)) / sfreq
+                segment = data[:,start_sample:end_sample]
+                segments.append(segment)
+                name = f"segment_{len(segments)}_from_30s_plus_to_trigger_{events[i+1, 2]}"
+                segment_names.append(name)
+                segment_durations.append(f"{name}:{duration:.2f}")
+        elif 29 < duration < 34:
+            if(duration * sfreq != 9000):
+                write(f"{name}:{duration*sfreq:.2f} fixed to -> 30s and 9000 samples")
+                end_sample = start_sample + 30 * sfreq
+                duration = (float(end_sample) - float(start_sample)) / sfreq 
             segment = data[:, start_sample:end_sample]
             segments.append(segment)
             segment_names.append(name)
@@ -74,7 +99,7 @@ def compare(events, data, log, sfreq=300):
     end_sample = min(end_sample, data.shape[1])  # don't go past end of data
     name = f"segment_{len(events)}_from_trigger_{last_id}_to_plus_30s"
     duration = (float(end_sample) - float(last_sample)) / sfreq
-    if 29 < duration < 34:
+    if 29 < duration:
         segment = data[:, last_sample:end_sample]
         segments.append(segment)
         segment_names.append(name)
@@ -89,6 +114,22 @@ def compare(events, data, log, sfreq=300):
     write("Discarded segments:", discarded)
     return segments, segment_durations
     
+def find_csv(base_dir="."):
+    base_path = Path(base_dir)
+    data_path = base_path / "tables"
+    if not data_path.exists():
+        data_path = base_path / "algorithm" / "tables"
+    if not data_path.exists():
+        messagebox.showerror("Folder Not Found", f"Could not find 'data' or 'algorithm/data' folder in {base_path}")
+        return None
+    csv_files = list(data_path.glob("*.csv"))
+    if not csv_files:
+        messagebox.showinfo("No Files", f"No .csv files found in:\n{data_path}")
+        return None
+    print(f"found {len(csv_files)} of csv files in the folder")
+    return csv_files
+
+
 
 def main():
     edf_files = find_edf()
@@ -108,7 +149,7 @@ def main():
             p(f"\n{info}")
             pname = info.split(" ")[0]
             if(pname not in per_info):
-                per_info[pname] = {"songs #" : 0}
+                per_info[pname] = {"songs #" : 0,"segments":[]}
             raw = mne.io.read_raw_edf(edf, preload=True)
             sfreq = int(raw.info["sfreq"])
             events = mne.find_events(raw, stim_channel='Trigger', min_duration=0.0)
@@ -116,8 +157,6 @@ def main():
             if len(events) == 0:
                 p("Zero triggers found")
                 continue
-
-            
             p(f"Found {len(events)} events, sfreq={sfreq}")
             total_events += len(events)
 
@@ -170,6 +209,10 @@ def main():
 
                     duration = (float(end_sample) - float(start_sample)) / sfreq
                     if 29 < duration < 31:  # accepts both ~30s and ~31s recordings
+                        if(duration * sfreq != 9000):
+                            p(f"{name}:{duration:.2f} fixed to -> 30s and 9000 samples")
+                            end_sample = start_sample + 30 * sfreq
+                            duration = (float(end_sample) - float(start_sample)) / sfreq 
                         seg = data[:, start_sample:end_sample]
                         segments.append(seg)
                         segment_names.append(name)
@@ -193,6 +236,7 @@ def main():
                 segments = comp_seg
                 segment_durations = comp_names
             per_info[pname]["songs #"] += len(segments)
+            per_info[pname]["segments"].extend(segments)
             total_seg += len(segments)
             if(len(segments) >= 20):
                 songs20.append(edf)
@@ -200,7 +244,10 @@ def main():
         p(f'Perfect data files: {[str(f) for f in songs20]}')
         p(f"\nTotal events across all files: {total_events}")
         p(f"Total usable songs: {total_seg}")
-        p(f"{per_info}")
+        p(f"\n--- PER PERSON SUMMARY ---")
+        for person, info in per_info.items():
+            p(f"{person}: {info['songs #']} songs , {len(info["segments"])} segments loaded")
+            np.save(f"algorithm/segments/{person}_segments.npy",np.array(info["segments"]))
         # np.save("segments.npy",np.array(all_segments))
         # np.save("segment_labels.npy",np.array(all_labels))
         # p(f"Saved{len(all_segments)} segmemnts into segments.npy")
