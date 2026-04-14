@@ -17,7 +17,9 @@ def find_edf(base_dir="."):
     if not edf_files:
         messagebox.showinfo("No Files", f"No .edf files found in:\n{data_path}")
         return None
+    print(f"found {len(edf_files)} of edf files in the folder")
     return edf_files
+
 def parse_filename(edf_path):
     name = edf_path.stem
     parts = [p for p in name.split("_") if p]  # filter empty strings
@@ -38,36 +40,54 @@ def parse_filename(edf_path):
         number = ""
     
     suffix = f" #{number}" if number else ""
+    info = [person,suffix,month,day,year]
     return f"{person}{suffix} {month}/{day}/{year}"
-def compare(events,data,log):
+
+def compare(events, data, log, sfreq=300):
     segments = []
     segment_names = []
     segment_durations = []
     discarded = []
 
-    # Pair triggers as (1st,2nd), (3rd,4th), (5th,6th), ...
     def write(*args, **kwargs):
         print(*args, **kwargs)
         print(*args, **kwargs, file=log)
-    for i in range(0, len(events) - 1):  # note: -1, and step of 1 not 2
+
+    for i in range(0, len(events) - 1):  # all except last
         start_sample = events[i, 0]
         end_sample = events[i + 1, 0]
         name = f"segment_{i+1}_from_trigger_{events[i, 2]}_to_{events[i+1, 2]}"
         
-        duration = (float(end_sample) - float(start_sample)) / 300
-        if duration > 29 and duration < 34:
+        duration = (float(end_sample) - float(start_sample)) / sfreq
+        if 29 < duration < 34:
             segment = data[:, start_sample:end_sample]
             segments.append(segment)
             segment_names.append(name)
             segment_durations.append(f"{name}: {duration:.2f}s")
         else:
             discarded.append(f"{name}: {duration:.2f}s")
+
+    # Handle the last trigger — no next trigger, so use +30s
+    last_sample = events[-1, 0]
+    last_id = events[-1, 2]
+    end_sample = last_sample + 30 * sfreq
+    end_sample = min(end_sample, data.shape[1])  # don't go past end of data
+    name = f"segment_{len(events)}_from_trigger_{last_id}_to_plus_30s"
+    duration = (float(end_sample) - float(last_sample)) / sfreq
+    if 29 < duration < 34:
+        segment = data[:, last_sample:end_sample]
+        segments.append(segment)
+        segment_names.append(name)
+        segment_durations.append(f"{name}: {duration:.2f}s")
+    else:
+        discarded.append(f"{name}: {duration:.2f}s")
+
     write("\n---SEGMENT INFO---")
     write(f"Created a total of {len(segments)+len(discarded)} segments with {len(events)} triggers. "
-        f"{len(segments)} used, {len(discarded)} discarded.")
+          f"{len(segments)} used, {len(discarded)} discarded.")
     write("Used segments:", segment_durations)
     write("Discarded segments:", discarded)
-    
+    return segments, segment_durations
     
 
 def main():
@@ -75,13 +95,20 @@ def main():
     total_events = 0
     total_seg = 0
     songs20 = []
+    all_segments = []
+    all_labels = []
+    per_info = {}
     with open("edf_report.txt", "w") as log:
         def p(*args, **kwargs):
             print(*args, **kwargs)
             print(*args, **kwargs, file=log)
 
         for edf in edf_files:
-            p(f"\n{parse_filename(edf)}")
+            info = parse_filename(edf)
+            p(f"\n{info}")
+            pname = info.split(" ")[0]
+            if(pname not in per_info):
+                per_info[pname] = {"songs #" : 0}
             raw = mne.io.read_raw_edf(edf, preload=True)
             sfreq = int(raw.info["sfreq"])
             events = mne.find_events(raw, stim_channel='Trigger', min_duration=0.0)
@@ -128,6 +155,7 @@ def main():
                         name = f"round_{round_idx+1}_segment_{i//2+1}_trigger_{trigger_start}_to_{trigger_end}"
                     else:
                         end_sample = start_sample + 30 * sfreq
+                        end_sample = min(end_sample,data.shape[1])
                         name = f"round_{round_idx+1}_segment_{i//2+1}_trigger_{trigger_start}_to_plus_30s"
                         
                         if round_idx + 1 < len(rounds):
@@ -141,10 +169,13 @@ def main():
                                 p(f"  OK: next round starts {gap:.2f}s after trigger_{trigger_start}, 30s window is clean")
 
                     duration = (float(end_sample) - float(start_sample)) / sfreq
-                    if 29 < duration < 31:  # accepts both ~30s and ~32s recordings
-                        segments.append(data[:, start_sample:end_sample])
+                    if 29 < duration < 31:  # accepts both ~30s and ~31s recordings
+                        seg = data[:, start_sample:end_sample]
+                        segments.append(seg)
                         segment_names.append(name)
                         segment_durations.append(f"{name}: {duration:.2f}s")
+                        all_segments.append(seg)
+                        all_labels.append(f"{parse_filename(edf)}_{name}")
                     else:
                         discarded.append(f"{name}: {duration:.2f}s")
 
@@ -153,15 +184,26 @@ def main():
               f"{len(segments)} used, {len(discarded)} discarded.")
             p("Used segments:", segment_durations)
             p("Discarded segments:", discarded)
+            if(pname == "Joonha" or (pname == "Yichen" and len(segments) < 20) or pname == "Andrew"):
+                if(info.count("3") > 1 and pname =="Yichen"):
+                    p("Yichen 3 found")
+                p("comparing to just one after the other-----")
+                comp_seg,comp_names = compare(events,data,log)
+                p("\n###using one after the other counting####")
+                segments = comp_seg
+                segment_durations = comp_names
+            per_info[pname]["songs #"] += len(segments)
             total_seg += len(segments)
-            if(len(segments) == 20):
+            if(len(segments) >= 20):
                 songs20.append(edf)
-            p("comparing to just one after the other-----")
-            compare(events,data,log)
 
         p(f'Perfect data files: {[str(f) for f in songs20]}')
         p(f"\nTotal events across all files: {total_events}")
         p(f"Total usable songs: {total_seg}")
+        p(f"{per_info}")
+        # np.save("segments.npy",np.array(all_segments))
+        # np.save("segment_labels.npy",np.array(all_labels))
+        # p(f"Saved{len(all_segments)} segmemnts into segments.npy")
 
 if __name__ == "__main__":
     main()
