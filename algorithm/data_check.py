@@ -1,7 +1,5 @@
 import mne
 import numpy as np
-import time
-import tkinter as tk
 from tkinter import messagebox
 from pathlib import Path
 
@@ -151,8 +149,18 @@ def main():
             if(pname not in per_info):
                 per_info[pname] = {"songs #" : 0,"segments":[]}
             raw = mne.io.read_raw_edf(edf, preload=True)
+            raw.set_eeg_reference(ref_channels=['EEG LE-Pz'])
+            channels = ['EEG F4', 'EEG C4', 'EEG P4', 'EEG P3', 'EEG C3', 'EEG F3', 'EEG Pz']
             sfreq = int(raw.info["sfreq"])
             events = mne.find_events(raw, stim_channel='Trigger', min_duration=0.0)
+            rename_dict = {}
+            for ch_name in raw.ch_names:
+                if '-Pz' in ch_name:
+                    rename_dict[ch_name] = ch_name.replace('-Pz', '')
+                if ch_name == "Pz":
+                    rename_dict[ch_name] = "EEG Pz"
+            raw.rename_channels(rename_dict)
+            raw = raw.pick(channels)
             data = raw.get_data()
             if len(events) == 0:
                 p("Zero triggers found")
@@ -232,10 +240,12 @@ def main():
                     p("Yichen 3 found")
                 p("comparing to just one after the other-----")
                 comp_seg,comp_names = compare(events,data,log)
-                p("\n###using one after the other counting####")
+                p(f"\n###using one after the other counting {len(comp_seg)}####")
+
                 segments = comp_seg
                 segment_durations = comp_names
             per_info[pname]["songs #"] += len(segments)
+            p(f"adding {len(segments)} amount of segments to {pname}")
             per_info[pname]["segments"].extend(segments)
             total_seg += len(segments)
             if(len(segments) >= 20):

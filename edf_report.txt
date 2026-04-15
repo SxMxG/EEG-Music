@@ -24,6 +24,7 @@ round_3_segment_3_trigger_5_to_6:30.01 fixed to -> 30s and 9000 samples
 Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
 Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
 Discarded segments: []
+adding 20 amount of segments to Ella
 
 Yichen #02 3/04/2026
 Found 3 events, sfreq=300
@@ -43,7 +44,8 @@ Created a total of 3 segments with 3 triggers. 2 used, 1 discarded.
 Used segments: ['segment_1_from_trigger_4_to_5: 30.00s', 'segment_2_from_trigger_5_to_6: 30.00s']
 Discarded segments: ['segment_3_from_trigger_6_to_plus_30s: 3.31s']
 
-###using one after the other counting####
+###using one after the other counting 2####
+adding 2 amount of segments to Yichen
 
 Yichen #03 3/04/2026
 Found 18 events, sfreq=300
@@ -80,7 +82,8 @@ Created a total of 19 segments with 18 triggers. 18 used, 1 discarded.
 Used segments: ['segment_1_from_trigger_8_to_9: 30.00s', 'segment_2_from_trigger_9_to_10: 30.00s', 'segment_3_from_trigger_10_to_11: 30.00s', 'segment_4_from_trigger_11_to_12: 30.00s', 'segment_5_from_trigger_12_to_13: 30.00s', 'segment_6_from_trigger_13_to_14: 30.00s', 'segment_7_from_trigger_14_to_15: 30.00s', 'segment_8_from_trigger_15_to_30s_plus:30.00', 'segment_9_from_30s_plus_to_trigger_1:30.00', 'segment_10_from_trigger_1_to_2: 30.00s', 'segment_11_from_trigger_2_to_3: 30.00s', 'segment_12_from_trigger_3_to_4: 30.00s', 'segment_13_from_trigger_4_to_5: 30.00s', 'segment_14_from_trigger_5_to_6: 30.00s', 'segment_15_from_trigger_6_to_7: 30.00s', 'segment_16_from_trigger_7_to_8: 30.00s', 'segment_17_from_trigger_8_to_9: 30.00s', 'segment_18_from_trigger_9_to_10: 30.00s']
 Discarded segments: ['segment_18_from_trigger_10_to_plus_30s: 8.58s']
 
-###using one after the other counting####
+###using one after the other counting 18####
+adding 18 amount of segments to Yichen
 
 Andrew #02 3/05/2026
 Found 4 events, sfreq=300
@@ -101,7 +104,8 @@ Created a total of 4 segments with 4 triggers. 3 used, 1 discarded.
 Used segments: ['segment_1_from_trigger_3_to_4: 30.00s', 'segment_2_from_trigger_4_to_5: 30.00s', 'segment_3_from_trigger_5_to_6: 30.00s']
 Discarded segments: ['segment_4_from_trigger_6_to_plus_30s: 20.13s']
 
-###using one after the other counting####
+###using one after the other counting 3####
+adding 3 amount of segments to Andrew
 
 Yichen 4/08/2026
 Found 38 events, sfreq=300
@@ -124,6 +128,7 @@ round_3_segment_3_trigger_5_to_6:30.01 fixed to -> 30s and 9000 samples
 Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
 Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
 Discarded segments: []
+adding 20 amount of segments to Yichen
 
 Tina #0001 4/09/2026
 Found 40 events, sfreq=300
@@ -150,6 +155,7 @@ round_3_segment_5_trigger_9_to_10:30.00 fixed to -> 30s and 9000 samples
 Created a total of 21 segments with 40 triggers. 21 used, 0 discarded.
 Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s', 'round_3_segment_5_trigger_9_to_10: 30.00s']
 Discarded segments: []
+adding 21 amount of segments to Tina
 
 Ella #02 3/11/2026
 Found 15 events, sfreq=300
@@ -167,6 +173,7 @@ round_1_segment_7_trigger_13_to_14:30.01 fixed to -> 30s and 9000 samples
 Created a total of 8 segments with 15 triggers. 8 used, 0 discarded.
 Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s']
 Discarded segments: []
+adding 8 amount of segments to Ella
 
 Joonha #01 3/11/2026
 Found 11 events, sfreq=300
@@ -196,7 +203,8 @@ Created a total of 11 segments with 11 triggers. 10 used, 1 discarded.
 Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_2_from_trigger_2_to_3: 30.00s', 'segment_3_from_trigger_3_to_4: 30.00s', 'segment_4_from_trigger_4_to_5: 30.00s', 'segment_5_from_trigger_5_to_6: 30.00s', 'segment_6_from_trigger_6_to_7: 30.00s', 'segment_7_from_trigger_7_to_8: 30.00s', 'segment_8_from_trigger_8_to_9: 30.00s', 'segment_9_from_trigger_9_to_10: 30.00s', 'segment_10_from_trigger_10_to_11: 30.00s']
 Discarded segments: ['segment_11_from_trigger_11_to_plus_30s: 11.71s']
 
-###using one after the other counting####
+###using one after the other counting 10####
+adding 10 amount of segments to Joonha
 
 Joonha #02 3/11/2026
 Found 12 events, sfreq=300
@@ -224,7 +232,8 @@ Created a total of 12 segments with 12 triggers. 9 used, 3 discarded.
 Used segments: ['segment_1_from_trigger_1_to_2: 30.00s', 'segment_2_from_trigger_2_to_3: 30.00s', 'segment_3_from_trigger_5_to_6: 30.00s', 'segment_4_from_trigger_6_to_7: 30.00s', 'segment_5_from_trigger_7_to_8: 30.00s', 'segment_6_from_trigger_8_to_9: 30.00s', 'segment_7_from_trigger_9_to_10: 30.00s', 'segment_8_from_trigger_10_to_11: 30.00s', 'segment_9_from_trigger_11_to_12: 30.00s']
 Discarded segments: ['segment_3_from_trigger_3_to_4: 10.04s', 'segment_3_from_trigger_4_to_5: 19.73s', 'segment_12_from_trigger_12_to_plus_30s: 1.87s']
 
-###using one after the other counting####
+###using one after the other counting 9####
+adding 9 amount of segments to Joonha
 
 Yichen #01 3/25/2026
 Found 38 events, sfreq=300
@@ -247,6 +256,7 @@ round_3_segment_2_trigger_3_to_4:30.00 fixed to -> 30s and 9000 samples
 Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
 Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
 Discarded segments: []
+adding 20 amount of segments to Yichen
 
 Tina 3/26/2026
 Found 38 events, sfreq=300
@@ -270,6 +280,7 @@ round_3_segment_4_trigger_7_to_8:30.00 fixed to -> 30s and 9000 samples
 Created a total of 20 segments with 38 triggers. 20 used, 0 discarded.
 Used segments: ['round_1_segment_1_trigger_1_to_2: 30.00s', 'round_1_segment_2_trigger_3_to_4: 30.00s', 'round_1_segment_3_trigger_5_to_6: 30.00s', 'round_1_segment_4_trigger_7_to_8: 30.00s', 'round_1_segment_5_trigger_9_to_10: 30.00s', 'round_1_segment_6_trigger_11_to_12: 30.00s', 'round_1_segment_7_trigger_13_to_14: 30.00s', 'round_1_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_2_segment_1_trigger_1_to_2: 30.00s', 'round_2_segment_2_trigger_3_to_4: 30.00s', 'round_2_segment_3_trigger_5_to_6: 30.00s', 'round_2_segment_4_trigger_7_to_8: 30.00s', 'round_2_segment_5_trigger_9_to_10: 30.00s', 'round_2_segment_6_trigger_11_to_12: 30.00s', 'round_2_segment_7_trigger_13_to_14: 30.00s', 'round_2_segment_8_trigger_15_to_plus_30s: 30.00s', 'round_3_segment_1_trigger_1_to_2: 30.00s', 'round_3_segment_2_trigger_3_to_4: 30.00s', 'round_3_segment_3_trigger_5_to_6: 30.00s', 'round_3_segment_4_trigger_7_to_8: 30.00s']
 Discarded segments: []
+adding 20 amount of segments to Tina
 Perfect data files: ['algorithm\\data\\04_2_2026_playlist_Ella_raw.edf', 'algorithm\\data\\08_4_2026_playlist_Yichen_raw.edf', 'algorithm\\data\\09_4_2026_playlist_Tina_0001_raw.edf', 'algorithm\\data\\25_3_2026_playlist_Yichen_01_raw.edf', 'algorithm\\data\\26_3_2026_playlist_Tina__raw.edf']
 
 Total events across all files: 255
