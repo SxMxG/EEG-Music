@@ -161,6 +161,7 @@ def main():
                     rename_dict[ch_name] = "EEG Pz"
             raw.rename_channels(rename_dict)
             raw = raw.pick(channels)
+            p(raw.ch_names)
             data = raw.get_data()
             if len(events) == 0:
                 p("Zero triggers found")

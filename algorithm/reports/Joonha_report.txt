@@ -1,0 +1,122 @@
+loaded algorithm\segments\Joonha_segments.npy with 19 segments
+loaded algorithm\tables\Joonha_song_list.csv with 19 labels
+
+--- Alignment Check (19 segments, 19 labels) ---
+Segment shape: (7, 9000)
+Segment min/max: -0.001057 / 0.000029
+Any non-zero: True
+  [ 0] Song # 1 | American Girls                 | Likes: nan        | alpha_avg: 0.000000
+  [ 1] Song # 2 | Stateside + Zara larsson       | Likes: nan        | alpha_avg: 0.000000
+  [ 2] Song # 3 | Choosin Texas                  | Likes: nan        | alpha_avg: 0.000000
+  [ 3] Song # 4 | Babydoll                       | Likes: nan        | alpha_avg: 0.000000
+  [ 4] Song # 5 | Risk it all                    | Likes: nan        | alpha_avg: 0.000000
+  [ 5] Song # 6 | Taste Back                     | Likes: nan        | alpha_avg: 0.000000
+  [ 6] Song # 7 | Coming up roses                | Likes: nan        | alpha_avg: 0.000000
+  [ 7] Song # 8 | Ready Set go                   | Likes: nan        | alpha_avg: 0.000000
+  [ 8] Song # 9 | DtMF                           | Likes: nan        | alpha_avg: 0.000000
+  [ 9] Song #10 | Man I need                     | Likes: nan        | alpha_avg: 0.000000
+  [10] Song #11 | E85                            | Likes: nan        | alpha_avg: 0.000000
+  [11] Song #12 | aperture                       | Likes: nan        | alpha_avg: 0.000000
+  [12] Song #13 | brain fog                      | Likes: nan        | alpha_avg: 0.000000
+  [13] Song #14 | So easy                        | Likes: nan        | alpha_avg: 0.000000
+  [14] Song #15 | Pop                            | Likes: nan        | alpha_avg: 0.000000
+  [15] Song #16 | Iloveitiloveitiloveit          | Likes: nan        | alpha_avg: 0.000000
+  [16] Song #17 | Are you listening Yet          | Likes: nan        | alpha_avg: 0.000000
+  [17] Song #18 | The waiting  game              | Likes: nan        | alpha_avg: 0.000000
+  [18] Song #19 | I just might                   | Likes: nan        | alpha_avg: 0.000000
+PCA reduced 35 -> 9 components
+
+--- HMM State vs Likes/Knows ---
+           Likes_num  Knows_num
+hmm_state                      
+0                NaN        1.2
+1                NaN        0.4
+2                NaN        2.0
+
+--- Transition Matrix ---
+           →0     →1     →2
+from 0  0.167  0.833  0.000
+from 1  0.833  0.000  0.167
+from 2  0.167  0.000  0.833
+
+--- Songs per State ---
+
+=== HMM State 0 ===
+    Song #                 Song name  Likes      Knows
+1        2  Stateside + Zara larsson    NaN       Know
+3        4                  Babydoll    NaN       Know
+5        6                Taste Back    NaN  dont know
+7        8              Ready Set go    NaN  dont know
+8        9                      DtMF    NaN       Know
+16      17     Are you listening Yet    NaN  dont Know
+18      19              I just might    NaN  dont Know
+
+=== HMM State 1 ===
+    Song #           Song name  Likes      Knows
+0        1      American Girls    NaN  dont know
+2        3       Choosin Texas    NaN  dont know
+4        5         Risk it all    NaN  dont know
+6        7     Coming up roses    NaN  dont know
+9       10          Man I need    NaN       Know
+17      18  The waiting  game     NaN  dont Know
+
+=== HMM State 2 ===
+    Song #              Song name  Likes      Knows
+10      11                    E85    NaN       know
+11      12               aperture    NaN  dont Know
+12      13              brain fog    NaN       Know
+13      14                So easy    NaN       Know
+14      15                    Pop    NaN  dont Know
+15      16  Iloveitiloveitiloveit    NaN  dont Know
+    Song #                 Song name  Likes      Knows  Likes_num  Knows_num  cluster
+0        1            American Girls    NaN  dont know        NaN        0.0       -1
+1        2  Stateside + Zara larsson    NaN       Know        NaN        2.0       -1
+2        3             Choosin Texas    NaN  dont know        NaN        0.0       -1
+3        4                  Babydoll    NaN       Know        NaN        2.0       -1
+4        5               Risk it all    NaN  dont know        NaN        0.0       -1
+5        6                Taste Back    NaN  dont know        NaN        0.0        1
+6        7           Coming up roses    NaN  dont know        NaN        0.0       -1
+7        8              Ready Set go    NaN  dont know        NaN        0.0       -1
+8        9                      DtMF    NaN       Know        NaN        2.0       -1
+9       10                Man I need    NaN       Know        NaN        2.0       -1
+10      11                       E85    NaN       know        NaN        NaN       -1
+11      12                  aperture    NaN  dont Know        NaN        NaN       -1
+12      13                 brain fog    NaN       Know        NaN        2.0       -1
+13      14                   So easy    NaN       Know        NaN        2.0        1
+14      15                       Pop    NaN  dont Know        NaN        NaN       -1
+15      16     Iloveitiloveitiloveit    NaN  dont Know        NaN        NaN        1
+16      17     Are you listening Yet    NaN  dont Know        NaN        NaN        0
+17      18        The waiting  game     NaN  dont Know        NaN        NaN        0
+18      19              I just might    NaN  dont Know        NaN        NaN        0
+         Likes_num  Knows_num
+cluster                      
+0              NaN        NaN
+1              NaN        1.0
+
+=== Cluster noise ===
+    Song #                 Song name  Likes      Knows
+0        1            American Girls    NaN  dont know
+1        2  Stateside + Zara larsson    NaN       Know
+2        3             Choosin Texas    NaN  dont know
+3        4                  Babydoll    NaN       Know
+4        5               Risk it all    NaN  dont know
+6        7           Coming up roses    NaN  dont know
+7        8              Ready Set go    NaN  dont know
+8        9                      DtMF    NaN       Know
+9       10                Man I need    NaN       Know
+10      11                       E85    NaN       know
+11      12                  aperture    NaN  dont Know
+12      13                 brain fog    NaN       Know
+14      15                       Pop    NaN  dont Know
+
+=== Cluster 0 ===
+    Song #              Song name  Likes      Knows
+16      17  Are you listening Yet    NaN  dont Know
+17      18     The waiting  game     NaN  dont Know
+18      19           I just might    NaN  dont Know
+
+=== Cluster 1 ===
+    Song #              Song name  Likes      Knows
+5        6             Taste Back    NaN  dont know
+13      14                So easy    NaN       Know
+15      16  Iloveitiloveitiloveit    NaN  dont Know

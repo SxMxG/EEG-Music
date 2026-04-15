@@ -1,0 +1,227 @@
+loaded algorithm\segments\Tina_segments.npy with 41 segments
+loaded algorithm\tables\Tina_song_list.csv with 41 labels
+
+--- Alignment Check (41 segments, 41 labels) ---
+Segment shape: (7, 9000)
+Segment min/max: -0.000769 / 0.000560
+Any non-zero: True
+  [ 0] Song # 1 | dont use this one              | Likes: nan        | alpha_avg: 0.000000
+  [ 1] Song # 2 | 踊 子                            | Likes: okay       | alpha_avg: 0.000000
+  [ 2] Song # 3 | make you mine                  | Likes: like       | alpha_avg: 0.000000
+  [ 3] Song # 4 | homesick                       | Likes: okay       | alpha_avg: 0.000000
+  [ 4] Song # 5 | 军港之夜                           | Likes: okay       | alpha_avg: 0.000000
+  [ 5] Song # 6 | I'm yours                      | Likes: like       | alpha_avg: 0.000000
+  [ 6] Song # 7 | sign of the times              | Likes: don't like  | alpha_avg: 0.000000
+  [ 7] Song # 8 | nobody                         | Likes: like       | alpha_avg: 0.000000
+  [ 8] Song # 9 | the other side                 | Likes: like       | alpha_avg: 0.000000
+  [ 9] Song #10 | homecoming                     | Likes: don't like  | alpha_avg: 0.000000
+  [10] Song #11 | FLY HIGH!!!                    | Likes: like       | alpha_avg: 0.000000
+  [11] Song #12 | fireflies                      | Likes: like       | alpha_avg: 0.000000
+  [12] Song #13 | 若梦                             | Likes: like       | alpha_avg: 0.000000
+  [13] Song #14 | kiss me right                  | Likes: like       | alpha_avg: 0.000000
+  [14] Song #15 | attention                      | Likes: like       | alpha_avg: 0.000000
+  [15] Song #16 | when we are younger            | Likes: like       | alpha_avg: 0.000000
+  [16] Song #17 | shape of you                   | Likes: like       | alpha_avg: 0.000000
+  [17] Song #18 | how much is weed               | Likes: okay       | alpha_avg: 0.000000
+  [18] Song #19 | 酒歌                             | Likes: okay       | alpha_avg: 0.000000
+  [19] Song #20 | kiss me                        | Likes: like       | alpha_avg: 0.000000
+  [20] Song #21 | if you want to                 | Likes: okay       | alpha_avg: 0.000000
+  [21] Song #22 | babydoll                       | Likes: okay       | alpha_avg: 0.000000
+  [22] Song #23 | choosin texas                  | Likes: likes      | alpha_avg: 0.000000
+  [23] Song #24 | Stateside                      | Likes: likes      | alpha_avg: 0.000000
+  [24] Song #25 | Attention                      | Likes: okay       | alpha_avg: 0.000000
+  [25] Song #26 | Swim                           | Likes: likes      | alpha_avg: 0.000000
+  [26] Song #27 | iloveitiloveitiloveit          | Likes: likes      | alpha_avg: 0.000000
+  [27] Song #28 | Man i need                     | Likes: okay       | alpha_avg: 0.000000
+  [28] Song #29 | E85                            | Likes: okay       | alpha_avg: 0.000000
+  [29] Song #30 | Risk it all                    | Likes: likes      | alpha_avg: 0.000000
+  [30] Song #31 | DtMF                           | Likes: okay       | alpha_avg: 0.000000
+  [31] Song #32 | Afraid                         | Likes: dont like  | alpha_avg: 0.000000
+  [32] Song #33 | War Pigs                       | Likes: dont like  | alpha_avg: 0.000000
+  [33] Song #34 | American Girls                 | Likes: Okay       | alpha_avg: 0.000000
+  [34] Song #35 | So Easy                        | Likes: likes      | alpha_avg: 0.000000
+  [35] Song #36 | Sky walker                     | Likes: Okay       | alpha_avg: 0.000000
+  [36] Song #37 | 12 to 12                       | Likes: Okay       | alpha_avg: 0.000000
+  [37] Song #38 | Everything i wanted            | Likes: dont like  | alpha_avg: 0.000000
+  [38] Song #39 | white keys                     | Likes: likes      | alpha_avg: 0.000000
+  [39] Song #40 | body to body                   | Likes: dont like  | alpha_avg: 0.000000
+  [40] Song #41 | Mr. Brightside                 | Likes: okay       | alpha_avg: 0.000000
+PCA reduced 35 -> 11 components
+
+--- HMM State vs Likes/Knows ---
+           Likes_num  Knows_num
+hmm_state                      
+0           1.000000        NaN
+1           0.750000   0.285714
+2           1.071429   0.000000
+3           1.000000   0.000000
+
+--- Transition Matrix ---
+           →0     →1     →2     →3
+from 0  0.667  0.000  0.333  0.000
+from 1  0.000  0.444  0.444  0.111
+from 2  0.222  0.167  0.611  0.000
+from 3  0.000  1.000  0.000  0.000
+
+--- Songs per State ---
+
+=== HMM State 0 ===
+    Song #            Song name        Likes       Knows
+3        4             homesick         okay  don't know
+5        6            I'm yours        like   don't know
+6        7    sign of the times  don't like   don't know
+9       10           homecoming  don't like   don't know
+10      11          FLY HIGH!!!        like         know
+11      12            fireflies        like         know
+12      13                   若梦        like         know
+13      14        kiss me right        like   don't know
+14      15            attention        like   don't know
+15      16  when we are younger        like   don't know
+16      17        shape of you         like         know
+19      20             kiss me         like   don't know
+
+=== HMM State 1 ===
+    Song #            Song name      Likes      Knows
+0        1    dont use this one        NaN        NaN
+21      22             babydoll       okay  dont know
+29      30          Risk it all      likes      Knows
+30      31                 DtMF       okay  dont know
+32      33             War Pigs  dont like  dont know
+33      34       American Girls       Okay  dont know
+34      35             So Easy       likes       know
+36      37             12 to 12       Okay  dont know
+37      38  Everything i wanted  dont like  dont know
+
+=== HMM State 2 ===
+    Song #              Song name      Likes       Knows
+1        2                    踊 子       okay  don't know
+2        3          make you mine      like   don't know
+4        5                   军港之夜       okay  don't know
+7        8                 nobody      like         know
+8        9         the other side      like   don't know
+17      18       how much is weed      okay   don't know
+18      19                     酒歌      okay   don't know
+20      21         if you want to       okay  don't know
+22      23          choosin texas      likes   dont know
+23      24              Stateside      likes   dont know
+24      25              Attention       okay   dont know
+25      26                   Swim      likes   dont know
+26      27  iloveitiloveitiloveit      likes   dont know
+27      28            Man i need        okay   dont know
+28      29                    E85       okay   dont know
+31      32                 Afraid  dont like   dont know
+38      39             white keys      likes   dont know
+39      40           body to body  dont like   dont know
+40      41         Mr. Brightside       okay   dont know
+
+=== HMM State 3 ===
+    Song #   Song name Likes      Knows
+35      36  Sky walker  Okay  dont know
+    Song #              Song name        Likes       Knows  Likes_num  Knows_num  cluster
+0        1      dont use this one          NaN         NaN        NaN        NaN       -1
+1        2                    踊 子         okay  don't know        1.0        NaN       -1
+2        3          make you mine        like   don't know        NaN        NaN        2
+3        4               homesick         okay  don't know        1.0        NaN       -1
+4        5                   军港之夜         okay  don't know        1.0        NaN       -1
+5        6              I'm yours        like   don't know        NaN        NaN        0
+6        7      sign of the times  don't like   don't know        NaN        NaN        0
+7        8                 nobody        like         know        NaN        NaN       -1
+8        9         the other side        like   don't know        NaN        NaN        1
+9       10             homecoming  don't like   don't know        NaN        NaN        0
+10      11            FLY HIGH!!!        like         know        NaN        NaN        4
+11      12              fireflies        like         know        NaN        NaN       -1
+12      13                     若梦        like         know        NaN        NaN       -1
+13      14          kiss me right        like   don't know        NaN        NaN        4
+14      15              attention        like   don't know        NaN        NaN       -1
+15      16    when we are younger        like   don't know        NaN        NaN       -1
+16      17          shape of you         like         know        NaN        NaN       -1
+17      18       how much is weed        okay   don't know        NaN        NaN        1
+18      19                     酒歌        okay   don't know        NaN        NaN       -1
+19      20               kiss me         like   don't know        NaN        NaN        4
+20      21         if you want to         okay  don't know        1.0        NaN        1
+21      22               babydoll         okay   dont know        1.0        0.0       -1
+22      23          choosin texas        likes   dont know        2.0        0.0        2
+23      24              Stateside        likes   dont know        2.0        0.0        2
+24      25              Attention         okay   dont know        1.0        0.0        2
+25      26                   Swim        likes   dont know        2.0        0.0        2
+26      27  iloveitiloveitiloveit        likes   dont know        2.0        0.0       -1
+27      28            Man i need          okay   dont know        1.0        0.0       -1
+28      29                    E85         okay   dont know        1.0        0.0       -1
+29      30            Risk it all        likes       Knows        2.0        2.0       -1
+30      31                   DtMF         okay   dont know        1.0        0.0        3
+31      32                 Afraid    dont like   dont know       -1.0        0.0       -1
+32      33               War Pigs    dont like   dont know       -1.0        0.0        3
+33      34         American Girls         Okay   dont know        1.0        0.0        3
+34      35               So Easy         likes        know        2.0        NaN        3
+35      36             Sky walker         Okay   dont know        1.0        0.0       -1
+36      37               12 to 12         Okay   dont know        1.0        0.0        3
+37      38    Everything i wanted    dont like   dont know       -1.0        0.0        3
+38      39             white keys        likes   dont know        2.0        0.0       -1
+39      40           body to body    dont like   dont know       -1.0        0.0       -1
+40      41         Mr. Brightside         okay   dont know        1.0        0.0       -1
+         Likes_num  Knows_num
+cluster                      
+0              NaN        NaN
+1             1.00        NaN
+2             1.75        0.0
+3             0.50        0.0
+4              NaN        NaN
+
+=== Cluster noise ===
+    Song #              Song name      Likes       Knows
+0        1      dont use this one        NaN         NaN
+1        2                    踊 子       okay  don't know
+3        4               homesick       okay  don't know
+4        5                   军港之夜       okay  don't know
+7        8                 nobody      like         know
+11      12              fireflies      like         know
+12      13                     若梦      like         know
+14      15              attention      like   don't know
+15      16    when we are younger      like   don't know
+16      17          shape of you       like         know
+18      19                     酒歌      okay   don't know
+21      22               babydoll       okay   dont know
+26      27  iloveitiloveitiloveit      likes   dont know
+27      28            Man i need        okay   dont know
+28      29                    E85       okay   dont know
+29      30            Risk it all      likes       Knows
+31      32                 Afraid  dont like   dont know
+35      36             Sky walker       Okay   dont know
+38      39             white keys      likes   dont know
+39      40           body to body  dont like   dont know
+40      41         Mr. Brightside       okay   dont know
+
+=== Cluster 0 ===
+   Song #          Song name        Likes       Knows
+5       6          I'm yours        like   don't know
+6       7  sign of the times  don't like   don't know
+9      10         homecoming  don't like   don't know
+
+=== Cluster 1 ===
+    Song #         Song name  Likes       Knows
+8        9    the other side  like   don't know
+17      18  how much is weed  okay   don't know
+20      21    if you want to   okay  don't know
+
+=== Cluster 2 ===
+    Song #      Song name  Likes       Knows
+2        3  make you mine  like   don't know
+22      23  choosin texas  likes   dont know
+23      24      Stateside  likes   dont know
+24      25      Attention   okay   dont know
+25      26           Swim  likes   dont know
+
+=== Cluster 3 ===
+    Song #            Song name      Likes      Knows
+30      31                 DtMF       okay  dont know
+32      33             War Pigs  dont like  dont know
+33      34       American Girls       Okay  dont know
+34      35             So Easy       likes       know
+36      37             12 to 12       Okay  dont know
+37      38  Everything i wanted  dont like  dont know
+
+=== Cluster 4 ===
+    Song #      Song name  Likes       Knows
+10      11    FLY HIGH!!!  like         know
+13      14  kiss me right  like   don't know
+19      20       kiss me   like   don't know

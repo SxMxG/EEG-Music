@@ -1,0 +1,166 @@
+loaded algorithm\segments\Ella_segments.npy with 28 segments
+loaded algorithm\tables\Ella_song_list.csv with 28 labels
+
+--- Alignment Check (28 segments, 28 labels) ---
+Segment shape: (7, 9000)
+Segment min/max: -0.000560 / 0.000472
+Any non-zero: True
+  [ 0] Song # 1 | Are You Bored Yet              | Likes: likes      | alpha_avg: 0.000000
+  [ 1] Song # 2 | again                          | Likes: dont like  | alpha_avg: 0.000000
+  [ 2] Song # 3 | Palo alto                      | Likes: dont like  | alpha_avg: 0.000000
+  [ 3] Song # 4 | Never be like You              | Likes: like       | alpha_avg: 0.000000
+  [ 4] Song # 5 | Fireflies                      | Likes: like       | alpha_avg: 0.000000
+  [ 5] Song # 6 | dont use this one              | Likes: nan        | alpha_avg: 0.000000
+  [ 6] Song # 7 | Roommates                      | Likes: dont like  | alpha_avg: 0.000000
+  [ 7] Song # 8 | 大地飞歌                           | Likes: like       | alpha_avg: 0.000000
+  [ 8] Song # 9 | Hush Money                     | Likes: okay       | alpha_avg: 0.000000
+  [ 9] Song #10 | 梅花三弄                           | Likes: like       | alpha_avg: 0.000000
+  [10] Song #11 | I love you Secretly            | Likes: dont like  | alpha_avg: 0.000000
+  [11] Song #12 | Beaches                        | Likes: okay       | alpha_avg: 0.000000
+  [12] Song #13 | Shape of you                   | Likes: like       | alpha_avg: 0.000000
+  [13] Song #14 | 失恋阵线联盟                         | Likes: like       | alpha_avg: 0.000000
+  [14] Song #15 | 军港之夜                           | Likes: like       | alpha_avg: 0.000000
+  [15] Song #16 | Homesick                       | Likes: like       | alpha_avg: 0.000000
+  [16] Song #17 | Ssx                            | Likes: dont like  | alpha_avg: 0.000000
+  [17] Song #18 | if you want to                 | Likes: okay       | alpha_avg: 0.000000
+  [18] Song #19 | hollow                         | Likes: okay       | alpha_avg: 0.000000
+  [19] Song #20 | 踊 子                            | Likes: dont like  | alpha_avg: 0.000000
+  [20] Song #21 | American Girls                 | Likes: no         | alpha_avg: 0.000000
+  [21] Song #22 | Stateside                      | Likes: no         | alpha_avg: 0.000000
+  [22] Song #23 | Choosin Texas                  | Likes: yes        | alpha_avg: 0.000000
+  [23] Song #24 | Babydoll                       | Likes: no         | alpha_avg: 0.000000
+  [24] Song #25 | Risk It All                    | Likes: yes        | alpha_avg: 0.000000
+  [25] Song #26 | Taste Back                     | Likes: no         | alpha_avg: 0.000000
+  [26] Song #27 | Coming Up Roses                | Likes: ok         | alpha_avg: 0.000000
+  [27] Song #28 | Ready Steady Go                | Likes: no         | alpha_avg: 0.000000
+PCA reduced 35 -> 4 components
+
+--- HMM State vs Likes/Knows ---
+           Likes_num  Knows_num
+hmm_state                      
+0           1.000000        0.0
+1                NaN        NaN
+2           0.541667        0.0
+
+--- Transition Matrix ---
+           →0   →1     →2
+from 0  0.000  0.5  0.500
+from 1  0.000  0.0  1.000
+from 2  0.083  0.0  0.917
+
+--- Songs per State ---
+
+=== HMM State 0 ===
+    Song #          Song name  Likes      Knows
+0        1  Are You Bored Yet  likes  Dont know
+4        5          Fireflies   like  dont know
+27      28    Ready Steady Go     no         no
+
+=== HMM State 1 ===
+   Song #          Song name Likes Knows
+5       6  dont use this one   NaN   NaN
+
+=== HMM State 2 ===
+    Song #            Song name      Likes      Knows
+1        2                again  dont like  dont know
+2        3            Palo alto  dont like  dont know
+3        4    Never be like You       like  dont know
+6        7            Roommates  dont like  dont know
+7        8                 大地飞歌       like       know
+8        9           Hush Money       okay  dont know
+9       10                 梅花三弄       like       know
+10      11  I love you Secretly  dont like  dont know
+11      12              Beaches       okay  dont know
+12      13         Shape of you       like       know
+13      14               失恋阵线联盟       like       know
+14      15                 军港之夜       like       know
+15      16             Homesick       like  dont know
+16      17                  Ssx  dont like  dont know
+17      18       if you want to       okay  dont know
+18      19               hollow       okay  dont know
+19      20                  踊 子  dont like  dont know
+20      21       American Girls         no         no
+21      22            Stateside         no         no
+22      23        Choosin Texas        yes         no
+23      24             Babydoll         no         no
+24      25          Risk It All        yes         no
+25      26           Taste Back         no         no
+26      27      Coming Up Roses         ok         no
+    Song #            Song name      Likes      Knows  Likes_num  Knows_num  cluster
+0        1    Are You Bored Yet      likes  Dont know        2.0        0.0        0
+1        2                again  dont like  dont know       -1.0        0.0       -1
+2        3            Palo alto  dont like  dont know       -1.0        0.0        2
+3        4    Never be like You       like  dont know        2.0        0.0       -1
+4        5            Fireflies       like  dont know        2.0        0.0       -1
+5        6    dont use this one        NaN        NaN        NaN        NaN       -1
+6        7            Roommates  dont like  dont know       -1.0        0.0       -1
+7        8                 大地飞歌       like       know        2.0        NaN        1
+8        9           Hush Money       okay  dont know        1.0        0.0       -1
+9       10                 梅花三弄       like       know        2.0        NaN        0
+10      11  I love you Secretly  dont like  dont know       -1.0        0.0       -1
+11      12              Beaches       okay  dont know        1.0        0.0        2
+12      13         Shape of you       like       know        2.0        NaN        2
+13      14               失恋阵线联盟       like       know        2.0        NaN       -1
+14      15                 军港之夜       like       know        2.0        NaN        0
+15      16             Homesick       like  dont know        2.0        0.0       -1
+16      17                  Ssx  dont like  dont know       -1.0        0.0        1
+17      18       if you want to       okay  dont know        1.0        0.0       -1
+18      19               hollow       okay  dont know        1.0        0.0        1
+19      20                  踊 子  dont like  dont know       -1.0        0.0       -1
+20      21       American Girls         no         no       -1.0        NaN        3
+21      22            Stateside         no         no       -1.0        NaN        3
+22      23        Choosin Texas        yes         no        2.0        NaN        3
+23      24             Babydoll         no         no       -1.0        NaN        3
+24      25          Risk It All        yes         no        2.0        NaN        3
+25      26           Taste Back         no         no       -1.0        NaN        3
+26      27      Coming Up Roses         ok         no        1.0        NaN        3
+27      28      Ready Steady Go         no         no       -1.0        NaN        3
+         Likes_num  Knows_num
+cluster                      
+0         2.000000        0.0
+1         0.666667        0.0
+2         0.666667        0.0
+3         0.000000        NaN
+
+=== Cluster noise ===
+    Song #            Song name      Likes      Knows
+1        2                again  dont like  dont know
+3        4    Never be like You       like  dont know
+4        5            Fireflies       like  dont know
+5        6    dont use this one        NaN        NaN
+6        7            Roommates  dont like  dont know
+8        9           Hush Money       okay  dont know
+10      11  I love you Secretly  dont like  dont know
+13      14               失恋阵线联盟       like       know
+15      16             Homesick       like  dont know
+17      18       if you want to       okay  dont know
+19      20                  踊 子  dont like  dont know
+
+=== Cluster 0 ===
+    Song #          Song name  Likes      Knows
+0        1  Are You Bored Yet  likes  Dont know
+9       10               梅花三弄   like       know
+14      15               军港之夜   like       know
+
+=== Cluster 1 ===
+    Song # Song name      Likes      Knows
+7        8      大地飞歌       like       know
+16      17       Ssx  dont like  dont know
+18      19    hollow       okay  dont know
+
+=== Cluster 2 ===
+    Song #     Song name      Likes      Knows
+2        3     Palo alto  dont like  dont know
+11      12       Beaches       okay  dont know
+12      13  Shape of you       like       know
+
+=== Cluster 3 ===
+    Song #        Song name Likes Knows
+20      21   American Girls    no    no
+21      22        Stateside    no    no
+22      23    Choosin Texas   yes    no
+23      24         Babydoll    no    no
+24      25      Risk It All   yes    no
+25      26       Taste Back    no    no
+26      27  Coming Up Roses    ok    no
+27      28  Ready Steady Go    no    no
