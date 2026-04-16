@@ -8,7 +8,7 @@ first 10 features: [1.70848195e-11 9.04672285e-12 7.05034228e-12 8.38726926e-13
  9.65240919e-13 1.60352332e-11 7.45896012e-12 8.00685620e-12
  1.71719465e-12 2.33713664e-12]
 
---- Alignment Check (60 segments, 60 labels) ---
+--- Alignment Check (58 segments, 58 labels) ---
 Segment shape: (7, 9000)
 Segment min/max: -0.000396 / 0.000146
 Any non-zero: True
@@ -18,387 +18,381 @@ Any non-zero: True
   [ 3] Song # 4 | DAISIES                        | Likes: nan        | alpha_avg: 0.000000
   [ 4] Song # 5 | Ordinary                       | Likes: nan        | alpha_avg: 0.000000
   [ 5] Song # 6 | Be her                         | Likes: nan        | alpha_avg: 0.000000
-  [ 6] Song # 7 | E85                            | Likes: nan        | alpha_avg: 0.000000
-  [ 7] Song # 8 | Die on this hill               | Likes: nan        | alpha_avg: 0.000000
-  [ 8] Song # 9 | Love Me not                    | Likes: nan        | alpha_avg: 0.000000
-  [ 9] Song #10 | Homewrecker                    | Likes: nan        | alpha_avg: 0.000000
-  [10] Song #11 | BAILE INoLVIDABLE              | Likes: nan        | alpha_avg: 0.000000
-  [11] Song #12 | GO                             | Likes: nan        | alpha_avg: 0.000000
-  [12] Song #13 | So Easy(to fall in Love)       | Likes: nan        | alpha_avg: 0.000000
-  [13] Song #14 | Midnight sun                   | Likes: nan        | alpha_avg: 0.000000
-  [14] Song #15 | YUKON                          | Likes: nan        | alpha_avg: 0.000000
-  [15] Song #16 | Choosin' Texas                 | Likes: nan        | alpha_avg: 0.000000
-  [16] Song #17 | iloveitiloveitiloveit          | Likes: nan        | alpha_avg: 0.000000
-  [17] Song #18 | WHERE IS MY HUSBAND            | Likes: nan        | alpha_avg: 0.000000
-  [18] Song #19 | 12 to 12                       | Likes: nan        | alpha_avg: 0.000000
-  [19] Song #20 | i just might                   | Likes: nan        | alpha_avg: 0.000000
-  [20] Song #21 | Babydoll                       | Likes: Okay       | alpha_avg: 0.000000
-  [21] Song #22 | choosin texas                  | Likes: okay       | alpha_avg: 0.000000
-  [22] Song #23 | stateside                      | Likes: okay       | alpha_avg: 0.000000
-  [23] Song #24 | Swim                           | Likes: Okay       | alpha_avg: 0.000000
-  [24] Song #25 | iloveitiloveitiloveit          | Likes: Likes      | alpha_avg: 0.000000
-  [25] Song #26 | Man I need                     | Likes: Likes      | alpha_avg: 0.000000
-  [26] Song #27 | E85                            | Likes: okay       | alpha_avg: 0.000000
-  [27] Song #28 | risk it all                    | Likes: okay       | alpha_avg: 0.000000
-  [28] Song #29 | DtMF                           | Likes: Likes      | alpha_avg: 0.000000
-  [29] Song #30 | American Girls                 | Likes: Likes      | alpha_avg: 0.000000
-  [30] Song #31 | So Easy                        | Likes: Likes      | alpha_avg: 0.000000
-  [31] Song #32 | Body to body                   | Likes: Dont like  | alpha_avg: 0.000000
-  [32] Song #33 | White Keys                     | Likes: okay       | alpha_avg: 0.000000
-  [33] Song #34 | Mr. Brightside                 | Likes: likes      | alpha_avg: 0.000000
-  [34] Song #35 | Body                           | Likes: Dont like  | alpha_avg: 0.000000
-  [35] Song #36 | End of Beginning               | Likes: okay       | alpha_avg: 0.000000
-  [36] Song #37 | werent for the wind            | Likes: okay       | alpha_avg: 0.000000
-  [37] Song #38 | Golden                         | Likes: okay       | alpha_avg: 0.000000
-  [38] Song #39 | Fya                            | Likes: dont like  | alpha_avg: 0.000000
-  [39] Song #40 | Hooligan                       | Likes: dont like  | alpha_avg: 0.000000
-  [40] Song #41 | Where is my husband            | Likes: Likes      | alpha_avg: 0.000000
-  [41] Song #42 | Black Quarterback              | Likes: Dont like  | alpha_avg: 0.000000
-  [42] Song #43 | 我们的歌谣                          | Likes: Okay       | alpha_avg: 0.000000
-  [43] Song #44 | Feelin Lovely                  | Likes: Okay       | alpha_avg: 0.000000
-  [44] Song #45 | When we were younger           | Likes: Okay       | alpha_avg: 0.000000
-  [45] Song #46 | Kiss me                        | Likes: Okay       | alpha_avg: 0.000000
-  [46] Song #47 | Attention                      | Likes: Likes      | alpha_avg: 0.000000
-  [47] Song #48 | 嗵嗵                             | Likes: Okay       | alpha_avg: 0.000000
-  [48] Song #49 | 东北民谣                           | Likes: Likes      | alpha_avg: 0.000000
-  [49] Song #50 | How much is weed?              | Likes: likes      | alpha_avg: 0.000000
-  [50] Song #51 | Kiss of Venus                  | Likes: likes      | alpha_avg: 0.000000
-  [51] Song #52 | 梅花三弄                           | Likes: okay       | alpha_avg: 0.000000
-  [52] Song #53 | Bang!                          | Likes: like       | alpha_avg: 0.000000
-  [53] Song #54 | Fly high!!!                    | Likes: okay       | alpha_avg: 0.000000
-  [54] Song #55 | Roommates                      | Likes: like       | alpha_avg: 0.000000
-  [55] Song #56 | 酒歌                             | Likes: Dont like  | alpha_avg: 0.000000
-  [56] Song #57 | 南屏晚钟                           | Likes: Okay       | alpha_avg: 0.000000
-  [57] Song #58 | the show                       | Likes: Like       | alpha_avg: 0.000000
-  [58] Song #59 | Good Time                      | Likes: Like       | alpha_avg: 0.000000
-  [59] Song #60 | STYX HELIX                     | Likes: okay       | alpha_avg: 0.000000
+  [ 6] Song # 8 | Die on this hill               | Likes: nan        | alpha_avg: 0.000000
+  [ 7] Song # 9 | Love Me not                    | Likes: nan        | alpha_avg: 0.000000
+  [ 8] Song #10 | Homewrecker                    | Likes: nan        | alpha_avg: 0.000000
+  [ 9] Song #11 | BAILE INoLVIDABLE              | Likes: nan        | alpha_avg: 0.000000
+  [10] Song #12 | GO                             | Likes: nan        | alpha_avg: 0.000000
+  [11] Song #13 | So Easy(to fall in Love)       | Likes: nan        | alpha_avg: 0.000000
+  [12] Song #14 | Midnight sun                   | Likes: nan        | alpha_avg: 0.000000
+  [13] Song #15 | YUKON                          | Likes: nan        | alpha_avg: 0.000000
+  [14] Song #16 | Choosin' Texas                 | Likes: nan        | alpha_avg: 0.000000
+  [15] Song #18 | WHERE IS MY HUSBAND            | Likes: nan        | alpha_avg: 0.000000
+  [16] Song #19 | 12 to 12                       | Likes: nan        | alpha_avg: 0.000000
+  [17] Song #20 | i just might                   | Likes: nan        | alpha_avg: 0.000000
+  [18] Song #21 | Babydoll                       | Likes: Okay       | alpha_avg: 0.000000
+  [19] Song #22 | choosin texas                  | Likes: okay       | alpha_avg: 0.000000
+  [20] Song #23 | stateside                      | Likes: okay       | alpha_avg: 0.000000
+  [21] Song #24 | Swim                           | Likes: Okay       | alpha_avg: 0.000000
+  [22] Song #25 | iloveitiloveitiloveit          | Likes: Likes      | alpha_avg: 0.000000
+  [23] Song #26 | Man I need                     | Likes: Likes      | alpha_avg: 0.000000
+  [24] Song #27 | E85                            | Likes: okay       | alpha_avg: 0.000000
+  [25] Song #28 | risk it all                    | Likes: okay       | alpha_avg: 0.000000
+  [26] Song #29 | DtMF                           | Likes: Likes      | alpha_avg: 0.000000
+  [27] Song #30 | American Girls                 | Likes: Likes      | alpha_avg: 0.000000
+  [28] Song #31 | So Easy                        | Likes: Likes      | alpha_avg: 0.000000
+  [29] Song #32 | Body to body                   | Likes: Dont like  | alpha_avg: 0.000000
+  [30] Song #33 | White Keys                     | Likes: okay       | alpha_avg: 0.000000
+  [31] Song #34 | Mr. Brightside                 | Likes: likes      | alpha_avg: 0.000000
+  [32] Song #35 | Body                           | Likes: Dont like  | alpha_avg: 0.000000
+  [33] Song #36 | End of Beginning               | Likes: okay       | alpha_avg: 0.000000
+  [34] Song #37 | werent for the wind            | Likes: okay       | alpha_avg: 0.000000
+  [35] Song #38 | Golden                         | Likes: okay       | alpha_avg: 0.000000
+  [36] Song #39 | Fya                            | Likes: dont like  | alpha_avg: 0.000000
+  [37] Song #40 | Hooligan                       | Likes: dont like  | alpha_avg: 0.000000
+  [38] Song #41 | Where is my husband            | Likes: Likes      | alpha_avg: 0.000000
+  [39] Song #42 | Black Quarterback              | Likes: Dont like  | alpha_avg: 0.000000
+  [40] Song #43 | 我们的歌谣                          | Likes: Okay       | alpha_avg: 0.000000
+  [41] Song #44 | Feelin Lovely                  | Likes: Okay       | alpha_avg: 0.000000
+  [42] Song #45 | When we were younger           | Likes: Okay       | alpha_avg: 0.000000
+  [43] Song #46 | Kiss me                        | Likes: Okay       | alpha_avg: 0.000000
+  [44] Song #47 | Attention                      | Likes: Likes      | alpha_avg: 0.000000
+  [45] Song #48 | 嗵嗵                             | Likes: Okay       | alpha_avg: 0.000000
+  [46] Song #49 | 东北民谣                           | Likes: Likes      | alpha_avg: 0.000000
+  [47] Song #50 | How much is weed?              | Likes: likes      | alpha_avg: 0.000000
+  [48] Song #51 | Kiss of Venus                  | Likes: likes      | alpha_avg: 0.000000
+  [49] Song #52 | 梅花三弄                           | Likes: okay       | alpha_avg: 0.000000
+  [50] Song #53 | Bang!                          | Likes: like       | alpha_avg: 0.000000
+  [51] Song #54 | Fly high!!!                    | Likes: okay       | alpha_avg: 0.000000
+  [52] Song #55 | Roommates                      | Likes: like       | alpha_avg: 0.000000
+  [53] Song #56 | 酒歌                             | Likes: Dont like  | alpha_avg: 0.000000
+  [54] Song #57 | 南屏晚钟                           | Likes: Okay       | alpha_avg: 0.000000
+  [55] Song #58 | the show                       | Likes: Like       | alpha_avg: 0.000000
+  [56] Song #59 | Good Time                      | Likes: Like       | alpha_avg: 0.000000
+  [57] Song #60 | STYX HELIX                     | Likes: okay       | alpha_avg: 0.000000
 
 --- HMM State Distribution ---
-  State 0: 14 songs (23.3%)
-  State 1: 17 songs (28.3%)
-  State 2: 19 songs (31.7%)
-  State 3: 2 songs (3.3%)
-  State 4: 8 songs (13.3%)
+  State 0: 13 songs (22.4%)
+  State 1: 7 songs (12.1%)
+  State 2: 8 songs (13.8%)
+  State 3: 7 songs (12.1%)
+  State 4: 2 songs (3.4%)
+  State 5: 12 songs (20.7%)
+  State 6: 9 songs (15.5%)
 
 --- HMM State vs Likes/Knows ---
            Likes_num  Knows_num
 hmm_state                      
-0           1.750000   0.571429
-1           1.000000   0.764706
-2           0.888889   0.421053
-3           1.500000   2.000000
-4           1.333333   0.500000
+0                NaN   0.769231
+1           1.333333   0.571429
+2           1.000000   0.375000
+3           1.000000   0.857143
+4           1.500000   2.000000
+5           1.083333   0.333333
+6           1.000000   0.666667
 
 --- Transition Matrix ---
-           →0     →1     →2     →3     →4
-from 0  0.499  0.288  0.000  0.000  0.214
-from 1  0.236  0.472  0.234  0.059  0.000
-from 2  0.113  0.162  0.557  0.056  0.111
-from 3  0.000  0.000  1.000  0.000  0.000
-from 4  0.125  0.250  0.250  0.000  0.375
+           →0     →1     →2     →3     →4     →5     →6
+from 0  0.769  0.231  0.000  0.000  0.000  0.000  0.000
+from 1  0.286  0.286  0.143  0.143  0.000  0.143  0.000
+from 2  0.125  0.250  0.625  0.000  0.000  0.000  0.000
+from 3  0.000  0.000  0.000  0.286  0.000  0.000  0.714
+from 4  0.000  0.000  0.000  0.500  0.000  0.500  0.000
+from 5  0.000  0.000  0.000  0.182  0.182  0.636  0.000
+from 6  0.000  0.000  0.111  0.111  0.000  0.333  0.444
 
 --- Songs per State ---
 
 === HMM State 0 ===
-    Song #              Song name  Likes      Knows
-1        2                Opalite    NaN       Know
-4        5               Ordinary    NaN       Know
-8        9            Love Me not    NaN  Dont know
-9       10            Homewrecker    NaN  Dont know
-10      11      BAILE INoLVIDABLE    NaN  Dont know
-11      12                     GO    NaN  Dont know
-15      16         Choosin' Texas    NaN  Dont know
-16      17  iloveitiloveitiloveit    NaN  Dont know
-17      18    WHERE IS MY HUSBAND    NaN       Know
-18      19               12 to 12    NaN  Dont know
-24      25  iloveitiloveitiloveit  Likes  Dont know
-25      26             Man I need  Likes       Know
-33      34         Mr. Brightside  likes  dont know
-44      45   When we were younger   Okay  Dont know
+    Song #            Song name Likes      Knows
+1        2              Opalite   NaN       Know
+2        3           Man i need   NaN       Know
+3        4              DAISIES   NaN  Dont know
+4        5             Ordinary   NaN       Know
+7        9          Love Me not   NaN  Dont know
+8       10          Homewrecker   NaN  Dont know
+9       11    BAILE INoLVIDABLE   NaN  Dont know
+10      12                   GO   NaN  Dont know
+12      14         Midnight sun   NaN       Know
+13      15                YUKON   NaN  Dont know
+14      16       Choosin' Texas   NaN  Dont know
+15      18  WHERE IS MY HUSBAND   NaN       Know
+16      19             12 to 12   NaN  Dont know
 
 === HMM State 1 ===
-    Song #         Song name      Likes      Knows
-2        3        Man i need        NaN       Know
-3        4           DAISIES        NaN  Dont know
-13      14      Midnight sun        NaN       Know
-14      15             YUKON        NaN  Dont know
-23      24              Swim       Okay  Dont know
-26      27               E85       okay  Dont know
-27      28       risk it all       okay       Know
-28      29              DtMF      Likes       Know
-29      30    American Girls      Likes       Know
-30      31           So Easy      Likes       Know
-34      35              Body  Dont like  dont know
-35      36  End of Beginning       okay  dont know
-39      40          Hooligan  dont like  dont know
-43      44     Feelin Lovely       Okay  Dont know
-45      46           Kiss me       Okay    Familar
-46      47         Attention      Likes  Dont know
-56      57              南屏晚钟       Okay  Dont know
-
-=== HMM State 2 ===
-    Song #            Song name      Likes      Knows
-0        1          Risk it all        NaN  Dont know
-21      22        choosin texas       okay       Know
-22      23            stateside       okay       Know
-31      32         Body to body  Dont like  Dont know
-32      33           White Keys       okay  Dont know
-36      37  werent for the wind       okay  dont know
-38      39                  Fya  dont like  dont know
-40      41  Where is my husband      Likes       Know
-41      42    Black Quarterback  Dont like  Dont know
-47      48                   嗵嗵       Okay  Dont know
-49      50    How much is weed?      likes  Dont know
-50      51        Kiss of Venus      likes  Dont know
-51      52                 梅花三弄       okay  Dont know
-52      53                Bang!       like  Dont know
-53      54          Fly high!!!       okay  Dont know
-54      55            Roommates       like  Dont know
-55      56                   酒歌  Dont like  Dont know
-58      59            Good Time       Like       Know
-59      60           STYX HELIX       okay  Dont know
-
-=== HMM State 3 ===
-    Song # Song name Likes Knows
-37      38    Golden  okay  Know
-57      58  the show  Like  Know
-
-=== HMM State 4 ===
     Song #                 Song name  Likes      Knows
 5        6                    Be her    NaN  Dont know
-6        7                       E85    NaN  Dont know
-7        8          Die on this hill    NaN  Dont know
-12      13  So Easy(to fall in Love)    NaN       Know
-19      20              i just might    NaN  Dont know
-20      21                  Babydoll   Okay  Dont know
-42      43                     我们的歌谣   Okay  Dont know
-48      49                      东北民谣  Likes       Know
+6        8          Die on this hill    NaN  Dont know
+11      13  So Easy(to fall in Love)    NaN       Know
+17      20              i just might    NaN  Dont know
+18      21                  Babydoll   Okay  Dont know
+40      43                     我们的歌谣   Okay  Dont know
+46      49                      东北民谣  Likes       Know
+
+=== HMM State 2 ===
+    Song #             Song name      Likes      Knows
+0        1           Risk it all        NaN  Dont know
+38      41   Where is my husband      Likes       Know
+39      42     Black Quarterback  Dont like  Dont know
+41      44         Feelin Lovely       Okay  Dont know
+42      45  When we were younger       Okay  Dont know
+43      46               Kiss me       Okay    Familar
+44      47             Attention      Likes  Dont know
+45      48                    嗵嗵       Okay  Dont know
+
+=== HMM State 3 ===
+    Song #       Song name      Likes      Knows
+19      22   choosin texas       okay       Know
+20      23       stateside       okay       Know
+23      26      Man I need      Likes       Know
+30      33      White Keys       okay  Dont know
+31      34  Mr. Brightside      likes  dont know
+36      39             Fya  dont like  dont know
+49      52            梅花三弄       okay  Dont know
+
+=== HMM State 4 ===
+    Song # Song name Likes Knows
+35      38    Golden  okay  Know
+55      58  the show  Like  Know
+
+=== HMM State 5 ===
+    Song #            Song name      Likes      Knows
+28      31              So Easy      Likes       Know
+29      32         Body to body  Dont like  Dont know
+33      36     End of Beginning       okay  dont know
+34      37  werent for the wind       okay  dont know
+47      50    How much is weed?      likes  Dont know
+48      51        Kiss of Venus      likes  Dont know
+51      54          Fly high!!!       okay  Dont know
+52      55            Roommates       like  Dont know
+53      56                   酒歌  Dont like  Dont know
+54      57                 南屏晚钟       Okay  Dont know
+56      59            Good Time       Like       Know
+57      60           STYX HELIX       okay  Dont know
+
+=== HMM State 6 ===
+    Song #              Song name      Likes      Knows
+21      24                   Swim       Okay  Dont know
+22      25  iloveitiloveitiloveit      Likes  Dont know
+24      27                    E85       okay  Dont know
+25      28            risk it all       okay       Know
+26      29                   DtMF      Likes       Know
+27      30         American Girls      Likes       Know
+32      35                   Body  Dont like  dont know
+37      40               Hooligan  dont like  dont know
+50      53                  Bang!       like  Dont know
     Song #                 Song name      Likes      Knows  Likes_num  Knows_num  cluster
 0        1               Risk it all        NaN  Dont know        NaN          0       -1
 1        2                   Opalite        NaN       Know        NaN          2        1
 2        3                Man i need        NaN       Know        NaN          2        1
 3        4                   DAISIES        NaN  Dont know        NaN          0        1
-4        5                  Ordinary        NaN       Know        NaN          2       -1
+4        5                  Ordinary        NaN       Know        NaN          2        3
 5        6                    Be her        NaN  Dont know        NaN          0       -1
-6        7                       E85        NaN  Dont know        NaN          0        3
-7        8          Die on this hill        NaN  Dont know        NaN          0        3
-8        9               Love Me not        NaN  Dont know        NaN          0        4
-9       10               Homewrecker        NaN  Dont know        NaN          0       -1
-10      11         BAILE INoLVIDABLE        NaN  Dont know        NaN          0        1
-11      12                        GO        NaN  Dont know        NaN          0        4
-12      13  So Easy(to fall in Love)        NaN       Know        NaN          2        3
-13      14              Midnight sun        NaN       Know        NaN          2       -1
-14      15                     YUKON        NaN  Dont know        NaN          0       -1
-15      16            Choosin' Texas        NaN  Dont know        NaN          0        1
-16      17     iloveitiloveitiloveit        NaN  Dont know        NaN          0        1
-17      18       WHERE IS MY HUSBAND        NaN       Know        NaN          2        4
-18      19                  12 to 12        NaN  Dont know        NaN          0        1
-19      20              i just might        NaN  Dont know        NaN          0       -1
-20      21                  Babydoll       Okay  Dont know        1.0          0       -1
-21      22             choosin texas       okay       Know        1.0          2        0
-22      23                 stateside       okay       Know        1.0          2       -1
-23      24                      Swim       Okay  Dont know        1.0          0        0
-24      25     iloveitiloveitiloveit      Likes  Dont know        2.0          0       -1
-25      26                Man I need      Likes       Know        2.0          2       -1
-26      27                       E85       okay  Dont know        1.0          0       -1
-27      28               risk it all       okay       Know        1.0          2       -1
-28      29                      DtMF      Likes       Know        2.0          2        0
-29      30            American Girls      Likes       Know        2.0          2        0
-30      31                   So Easy      Likes       Know        2.0          2       -1
-31      32              Body to body  Dont like  Dont know       -1.0          0        0
-32      33                White Keys       okay  Dont know        1.0          0       -1
-33      34            Mr. Brightside      likes  dont know        2.0          0       -1
-34      35                      Body  Dont like  dont know       -1.0          0        0
-35      36          End of Beginning       okay  dont know        1.0          0       -1
-36      37       werent for the wind       okay  dont know        1.0          0       -1
-37      38                    Golden       okay       Know        1.0          2       -1
-38      39                       Fya  dont like  dont know       -1.0          0       -1
-39      40                  Hooligan  dont like  dont know       -1.0          0        0
-40      41       Where is my husband      Likes       Know        2.0          2       -1
-41      42         Black Quarterback  Dont like  Dont know       -1.0          0       -1
-42      43                     我们的歌谣       Okay  Dont know        1.0          0       -1
-43      44             Feelin Lovely       Okay  Dont know        1.0          0        2
-44      45      When we were younger       Okay  Dont know        1.0          0       -1
-45      46                   Kiss me       Okay    Familar        1.0          1        2
-46      47                 Attention      Likes  Dont know        2.0          0        2
-47      48                        嗵嗵       Okay  Dont know        1.0          0       -1
-48      49                      东北民谣      Likes       Know        2.0          2       -1
-49      50         How much is weed?      likes  Dont know        2.0          0       -1
-50      51             Kiss of Venus      likes  Dont know        2.0          0       -1
-51      52                      梅花三弄       okay  Dont know        1.0          0        0
-52      53                     Bang!       like  Dont know        2.0          0       -1
-53      54               Fly high!!!       okay  Dont know        1.0          0       -1
-54      55                 Roommates       like  Dont know        2.0          0       -1
-55      56                        酒歌  Dont like  Dont know       -1.0          0       -1
-56      57                      南屏晚钟       Okay  Dont know        1.0          0       -1
-57      58                  the show       Like       Know        2.0          2       -1
-58      59                 Good Time       Like       Know        2.0          2       -1
-59      60                STYX HELIX       okay  Dont know        1.0          0        0
+6        8          Die on this hill        NaN  Dont know        NaN          0       -1
+7        9               Love Me not        NaN  Dont know        NaN          0        3
+8       10               Homewrecker        NaN  Dont know        NaN          0       -1
+9       11         BAILE INoLVIDABLE        NaN  Dont know        NaN          0        1
+10      12                        GO        NaN  Dont know        NaN          0        3
+11      13  So Easy(to fall in Love)        NaN       Know        NaN          2       -1
+12      14              Midnight sun        NaN       Know        NaN          2       -1
+13      15                     YUKON        NaN  Dont know        NaN          0       -1
+14      16            Choosin' Texas        NaN  Dont know        NaN          0        1
+15      18       WHERE IS MY HUSBAND        NaN       Know        NaN          2        3
+16      19                  12 to 12        NaN  Dont know        NaN          0        1
+17      20              i just might        NaN  Dont know        NaN          0       -1
+18      21                  Babydoll       Okay  Dont know        1.0          0       -1
+19      22             choosin texas       okay       Know        1.0          2       -1
+20      23                 stateside       okay       Know        1.0          2       -1
+21      24                      Swim       Okay  Dont know        1.0          0       -1
+22      25     iloveitiloveitiloveit      Likes  Dont know        2.0          0       -1
+23      26                Man I need      Likes       Know        2.0          2       -1
+24      27                       E85       okay  Dont know        1.0          0       -1
+25      28               risk it all       okay       Know        1.0          2       -1
+26      29                      DtMF      Likes       Know        2.0          2       -1
+27      30            American Girls      Likes       Know        2.0          2       -1
+28      31                   So Easy      Likes       Know        2.0          2       -1
+29      32              Body to body  Dont like  Dont know       -1.0          0        0
+30      33                White Keys       okay  Dont know        1.0          0       -1
+31      34            Mr. Brightside      likes  dont know        2.0          0       -1
+32      35                      Body  Dont like  dont know       -1.0          0        0
+33      36          End of Beginning       okay  dont know        1.0          0       -1
+34      37       werent for the wind       okay  dont know        1.0          0       -1
+35      38                    Golden       okay       Know        1.0          2       -1
+36      39                       Fya  dont like  dont know       -1.0          0       -1
+37      40                  Hooligan  dont like  dont know       -1.0          0       -1
+38      41       Where is my husband      Likes       Know        2.0          2       -1
+39      42         Black Quarterback  Dont like  Dont know       -1.0          0       -1
+40      43                     我们的歌谣       Okay  Dont know        1.0          0       -1
+41      44             Feelin Lovely       Okay  Dont know        1.0          0        2
+42      45      When we were younger       Okay  Dont know        1.0          0       -1
+43      46                   Kiss me       Okay    Familar        1.0          1        2
+44      47                 Attention      Likes  Dont know        2.0          0        2
+45      48                        嗵嗵       Okay  Dont know        1.0          0       -1
+46      49                      东北民谣      Likes       Know        2.0          2       -1
+47      50         How much is weed?      likes  Dont know        2.0          0       -1
+48      51             Kiss of Venus      likes  Dont know        2.0          0       -1
+49      52                      梅花三弄       okay  Dont know        1.0          0       -1
+50      53                     Bang!       like  Dont know        2.0          0       -1
+51      54               Fly high!!!       okay  Dont know        1.0          0       -1
+52      55                 Roommates       like  Dont know        2.0          0       -1
+53      56                        酒歌  Dont like  Dont know       -1.0          0       -1
+54      57                      南屏晚钟       Okay  Dont know        1.0          0       -1
+55      58                  the show       Like       Know        2.0          2       -1
+56      59                 Good Time       Like       Know        2.0          2       -1
+57      60                STYX HELIX       okay  Dont know        1.0          0        0
          Likes_num  Knows_num
 cluster                      
-0         0.555556   0.666667
-1              NaN   0.571429
+0        -0.333333   0.000000
+1              NaN   0.666667
 2         1.333333   0.333333
-3              NaN   0.666667
-4              NaN   0.666667
+3              NaN   1.000000
 
 === Cluster noise ===
-    Song #              Song name      Likes      Knows
-0        1            Risk it all        NaN  Dont know
-4        5               Ordinary        NaN       Know
-5        6                 Be her        NaN  Dont know
-9       10            Homewrecker        NaN  Dont know
-13      14           Midnight sun        NaN       Know
-14      15                  YUKON        NaN  Dont know
-19      20           i just might        NaN  Dont know
-20      21               Babydoll       Okay  Dont know
-22      23              stateside       okay       Know
-24      25  iloveitiloveitiloveit      Likes  Dont know
-25      26             Man I need      Likes       Know
-26      27                    E85       okay  Dont know
-27      28            risk it all       okay       Know
-30      31                So Easy      Likes       Know
-32      33             White Keys       okay  Dont know
-33      34         Mr. Brightside      likes  dont know
-35      36       End of Beginning       okay  dont know
-36      37    werent for the wind       okay  dont know
-37      38                 Golden       okay       Know
-38      39                    Fya  dont like  dont know
-40      41    Where is my husband      Likes       Know
-41      42      Black Quarterback  Dont like  Dont know
-42      43                  我们的歌谣       Okay  Dont know
-44      45   When we were younger       Okay  Dont know
-47      48                     嗵嗵       Okay  Dont know
-48      49                   东北民谣      Likes       Know
-49      50      How much is weed?      likes  Dont know
-50      51          Kiss of Venus      likes  Dont know
-52      53                  Bang!       like  Dont know
-53      54            Fly high!!!       okay  Dont know
-54      55              Roommates       like  Dont know
-55      56                     酒歌  Dont like  Dont know
-56      57                   南屏晚钟       Okay  Dont know
-57      58               the show       Like       Know
-58      59              Good Time       Like       Know
+    Song #                 Song name      Likes      Knows
+0        1               Risk it all        NaN  Dont know
+5        6                    Be her        NaN  Dont know
+6        8          Die on this hill        NaN  Dont know
+8       10               Homewrecker        NaN  Dont know
+11      13  So Easy(to fall in Love)        NaN       Know
+12      14              Midnight sun        NaN       Know
+13      15                     YUKON        NaN  Dont know
+17      20              i just might        NaN  Dont know
+18      21                  Babydoll       Okay  Dont know
+19      22             choosin texas       okay       Know
+20      23                 stateside       okay       Know
+21      24                      Swim       Okay  Dont know
+22      25     iloveitiloveitiloveit      Likes  Dont know
+23      26                Man I need      Likes       Know
+24      27                       E85       okay  Dont know
+25      28               risk it all       okay       Know
+26      29                      DtMF      Likes       Know
+27      30            American Girls      Likes       Know
+28      31                   So Easy      Likes       Know
+30      33                White Keys       okay  Dont know
+31      34            Mr. Brightside      likes  dont know
+33      36          End of Beginning       okay  dont know
+34      37       werent for the wind       okay  dont know
+35      38                    Golden       okay       Know
+36      39                       Fya  dont like  dont know
+37      40                  Hooligan  dont like  dont know
+38      41       Where is my husband      Likes       Know
+39      42         Black Quarterback  Dont like  Dont know
+40      43                     我们的歌谣       Okay  Dont know
+42      45      When we were younger       Okay  Dont know
+45      48                        嗵嗵       Okay  Dont know
+46      49                      东北民谣      Likes       Know
+47      50         How much is weed?      likes  Dont know
+48      51             Kiss of Venus      likes  Dont know
+49      52                      梅花三弄       okay  Dont know
+50      53                     Bang!       like  Dont know
+51      54               Fly high!!!       okay  Dont know
+52      55                 Roommates       like  Dont know
+53      56                        酒歌  Dont like  Dont know
+54      57                      南屏晚钟       Okay  Dont know
+55      58                  the show       Like       Know
+56      59                 Good Time       Like       Know
 
 === Cluster 0 ===
-    Song #       Song name      Likes      Knows
-21      22   choosin texas       okay       Know
-23      24            Swim       Okay  Dont know
-28      29            DtMF      Likes       Know
-29      30  American Girls      Likes       Know
-31      32    Body to body  Dont like  Dont know
-34      35            Body  Dont like  dont know
-39      40        Hooligan  dont like  dont know
-51      52            梅花三弄       okay  Dont know
-59      60      STYX HELIX       okay  Dont know
+    Song #     Song name      Likes      Knows
+29      32  Body to body  Dont like  Dont know
+32      35          Body  Dont like  dont know
+57      60    STYX HELIX       okay  Dont know
 
 === Cluster 1 ===
-    Song #              Song name Likes      Knows
-1        2                Opalite   NaN       Know
-2        3             Man i need   NaN       Know
-3        4                DAISIES   NaN  Dont know
-10      11      BAILE INoLVIDABLE   NaN  Dont know
-15      16         Choosin' Texas   NaN  Dont know
-16      17  iloveitiloveitiloveit   NaN  Dont know
-18      19               12 to 12   NaN  Dont know
+    Song #          Song name Likes      Knows
+1        2            Opalite   NaN       Know
+2        3         Man i need   NaN       Know
+3        4            DAISIES   NaN  Dont know
+9       11  BAILE INoLVIDABLE   NaN  Dont know
+14      16     Choosin' Texas   NaN  Dont know
+16      19           12 to 12   NaN  Dont know
 
 === Cluster 2 ===
     Song #      Song name  Likes      Knows
-43      44  Feelin Lovely   Okay  Dont know
-45      46        Kiss me   Okay    Familar
-46      47      Attention  Likes  Dont know
+41      44  Feelin Lovely   Okay  Dont know
+43      46        Kiss me   Okay    Familar
+44      47      Attention  Likes  Dont know
 
 === Cluster 3 ===
-    Song #                 Song name Likes      Knows
-6        7                       E85   NaN  Dont know
-7        8          Die on this hill   NaN  Dont know
-12      13  So Easy(to fall in Love)   NaN       Know
-
-=== Cluster 4 ===
     Song #            Song name Likes      Knows
-8        9          Love Me not   NaN  Dont know
-11      12                   GO   NaN  Dont know
-17      18  WHERE IS MY HUSBAND   NaN       Know
+4        5             Ordinary   NaN       Know
+7        9          Love Me not   NaN  Dont know
+10      12                   GO   NaN  Dont know
+15      18  WHERE IS MY HUSBAND   NaN       Know
 
 --- HDBSCAN Results ---
              Likes_num  Knows_num
 hdb_cluster                      
-0                  NaN   0.500000
-1                  NaN   0.666667
-2             0.888889   0.666667
-3                  NaN   0.666667
+0                  NaN   0.666667
+1             0.888889   0.666667
+2                  NaN   1.333333
 
 === HDBSCAN Cluster noise ===
-    Song #              Song name      Likes      Knows
-0        1            Risk it all        NaN  Dont know
-4        5               Ordinary        NaN       Know
-5        6                 Be her        NaN  Dont know
-13      14           Midnight sun        NaN       Know
-14      15                  YUKON        NaN  Dont know
-18      19               12 to 12        NaN  Dont know
-19      20           i just might        NaN  Dont know
-20      21               Babydoll       Okay  Dont know
-24      25  iloveitiloveitiloveit      Likes  Dont know
-25      26             Man I need      Likes       Know
-26      27                    E85       okay  Dont know
-33      34         Mr. Brightside      likes  dont know
-36      37    werent for the wind       okay  dont know
-37      38                 Golden       okay       Know
-40      41    Where is my husband      Likes       Know
-41      42      Black Quarterback  Dont like  Dont know
-42      43                  我们的歌谣       Okay  Dont know
-43      44          Feelin Lovely       Okay  Dont know
-44      45   When we were younger       Okay  Dont know
-45      46                Kiss me       Okay    Familar
-46      47              Attention      Likes  Dont know
-47      48                     嗵嗵       Okay  Dont know
-48      49                   东北民谣      Likes       Know
-52      53                  Bang!       like  Dont know
-53      54            Fly high!!!       okay  Dont know
-55      56                     酒歌  Dont like  Dont know
-56      57                   南屏晚钟       Okay  Dont know
-57      58               the show       Like       Know
-58      59              Good Time       Like       Know
+    Song #                 Song name      Likes      Knows
+0        1               Risk it all        NaN  Dont know
+3        4                   DAISIES        NaN  Dont know
+4        5                  Ordinary        NaN       Know
+5        6                    Be her        NaN  Dont know
+6        8          Die on this hill        NaN  Dont know
+8       10               Homewrecker        NaN  Dont know
+9       11         BAILE INoLVIDABLE        NaN  Dont know
+11      13  So Easy(to fall in Love)        NaN       Know
+12      14              Midnight sun        NaN       Know
+13      15                     YUKON        NaN  Dont know
+16      19                  12 to 12        NaN  Dont know
+17      20              i just might        NaN  Dont know
+18      21                  Babydoll       Okay  Dont know
+22      25     iloveitiloveitiloveit      Likes  Dont know
+23      26                Man I need      Likes       Know
+24      27                       E85       okay  Dont know
+31      34            Mr. Brightside      likes  dont know
+34      37       werent for the wind       okay  dont know
+35      38                    Golden       okay       Know
+38      41       Where is my husband      Likes       Know
+39      42         Black Quarterback  Dont like  Dont know
+40      43                     我们的歌谣       Okay  Dont know
+41      44             Feelin Lovely       Okay  Dont know
+42      45      When we were younger       Okay  Dont know
+43      46                   Kiss me       Okay    Familar
+44      47                 Attention      Likes  Dont know
+45      48                        嗵嗵       Okay  Dont know
+46      49                      东北民谣      Likes       Know
+50      53                     Bang!       like  Dont know
+51      54               Fly high!!!       okay  Dont know
+53      56                        酒歌  Dont like  Dont know
+54      57                      南屏晚钟       Okay  Dont know
+55      58                  the show       Like       Know
+56      59                 Good Time       Like       Know
 
 === HDBSCAN Cluster 0 ===
     Song #            Song name Likes      Knows
-8        9          Love Me not   NaN  Dont know
-9       10          Homewrecker   NaN  Dont know
-11      12                   GO   NaN  Dont know
-17      18  WHERE IS MY HUSBAND   NaN       Know
+7        9          Love Me not   NaN  Dont know
+10      12                   GO   NaN  Dont know
+15      18  WHERE IS MY HUSBAND   NaN       Know
 
 === HDBSCAN Cluster 1 ===
-    Song #                 Song name Likes      Knows
-6        7                       E85   NaN  Dont know
-7        8          Die on this hill   NaN  Dont know
-12      13  So Easy(to fall in Love)   NaN       Know
+    Song #          Song name      Likes      Knows
+19      22      choosin texas       okay       Know
+20      23          stateside       okay       Know
+21      24               Swim       Okay  Dont know
+25      28        risk it all       okay       Know
+26      29               DtMF      Likes       Know
+27      30     American Girls      Likes       Know
+28      31            So Easy      Likes       Know
+29      32       Body to body  Dont like  Dont know
+30      33         White Keys       okay  Dont know
+32      35               Body  Dont like  dont know
+33      36   End of Beginning       okay  dont know
+36      39                Fya  dont like  dont know
+37      40           Hooligan  dont like  dont know
+47      50  How much is weed?      likes  Dont know
+48      51      Kiss of Venus      likes  Dont know
+49      52               梅花三弄       okay  Dont know
+52      55          Roommates       like  Dont know
+57      60         STYX HELIX       okay  Dont know
 
 === HDBSCAN Cluster 2 ===
-    Song #          Song name      Likes      Knows
-21      22      choosin texas       okay       Know
-22      23          stateside       okay       Know
-23      24               Swim       Okay  Dont know
-27      28        risk it all       okay       Know
-28      29               DtMF      Likes       Know
-29      30     American Girls      Likes       Know
-30      31            So Easy      Likes       Know
-31      32       Body to body  Dont like  Dont know
-32      33         White Keys       okay  Dont know
-34      35               Body  Dont like  dont know
-35      36   End of Beginning       okay  dont know
-38      39                Fya  dont like  dont know
-39      40           Hooligan  dont like  dont know
-49      50  How much is weed?      likes  Dont know
-50      51      Kiss of Venus      likes  Dont know
-51      52               梅花三弄       okay  Dont know
-54      55          Roommates       like  Dont know
-59      60         STYX HELIX       okay  Dont know
-
-=== HDBSCAN Cluster 3 ===
-    Song #              Song name Likes      Knows
-1        2                Opalite   NaN       Know
-2        3             Man i need   NaN       Know
-3        4                DAISIES   NaN  Dont know
-10      11      BAILE INoLVIDABLE   NaN  Dont know
-15      16         Choosin' Texas   NaN  Dont know
-16      17  iloveitiloveitiloveit   NaN  Dont know
+    Song #       Song name Likes      Knows
+1        2         Opalite   NaN       Know
+2        3      Man i need   NaN       Know
+14      16  Choosin' Texas   NaN  Dont know

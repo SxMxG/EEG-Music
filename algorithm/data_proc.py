@@ -226,8 +226,12 @@ def main():
         p(f"loaded {seg_file} with {len(segments)} segments")
         all_labels = pd.read_csv(f"{table_file}")
         p(f"loaded {table_file} with {len(all_labels)} labels")
+        mask_dup = ~all_labels.duplicated(subset="Song name", keep="last")
+        mask_skip = ~all_labels["Song name"].str.contains("dont use this one", case=False, na=False)
+        mask = mask_dup & mask_skip
+        all_labels = all_labels[mask].reset_index(drop=True)
+        segments = segments[mask.values]
         verify_alignment(segments, all_labels,p)
-
         # feature matrices
         X = build_feature_matrix(segments)              # 35 features — OPTICS
         X_avg = build_feature_matrix(segments, avg=True) # 15 features — HMM
@@ -251,7 +255,7 @@ def main():
         MIN_SONGS_HMM = 10
         run_hmm = len(segments) >= MIN_SONGS_HMM
         if run_hmm:
-            n_states = 5 if len(segments) > 20 else 3
+            n_states = 7 if len(segments) > 20 else 3
             model, states = fit_hmm_best(X_avg_scaled,p,n_states=n_states)
         else:
             p(f"Too few segments ({len(segments)}) for HMM, skipping")
