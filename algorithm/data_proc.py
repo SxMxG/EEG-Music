@@ -12,6 +12,22 @@ from tkinter import messagebox
 from hmmlearn import hmm
 
 def verify_alignment(segments, df, p, sfreq=300):
+    # add this to verify_alignment temporarily
+    seg = segments[0]
+    freqs, psd = welch(seg[0], fs=sfreq, nperseg=sfreq*2)
+    p(f"freqs range: {freqs[0]:.2f} - {freqs[-1]:.2f}")
+    print(f"psd range: {psd.min():.8f} - {psd.max():.8f}")
+
+    # check alpha band specifically
+    alpha_idx = np.where((freqs >= 8) & (freqs <= 13))
+    p(f"alpha idx: {alpha_idx}")
+    print(f"alpha power: {np.mean(psd[alpha_idx]):.8f}")
+
+    features = extract_band_power(seg, sfreq)
+    p(f"features shape: {features.shape}")
+    p(f"features range: {features.min():.8f} - {features.max():.8f}")
+    p(f"first 10 features: {features[:10]}")
+
     p(f"\n--- Alignment Check ({len(segments)} segments, {len(df)} labels) ---")
     
     if len(segments) != len(df):
@@ -105,16 +121,29 @@ def build_feature_matrix(segments, sfreq=300, avg=False):
             X.append(extract_band_power(seg, sfreq))
     return np.array(X)
 ## HMM HELPERS
-def fit_hmm(X_scaled, n_states=3):
-    model = hmm.GaussianHMM(
-        n_components=n_states,
-        covariance_type="full",
-        n_iter=100,
-        random_state=42
-    )
-    model.fit(X_scaled)
-    states = model.predict(X_scaled)
-    return model, states
+def fit_hmm_best(X_scaled, p,n_states=3, n_restarts=10):
+    best_model = None
+    best_balance = float('inf')
+    
+    for seed in range(n_restarts):
+        model = hmm.GaussianHMM(n_components=n_states, covariance_type="diag",
+                                 n_iter=100, random_state=seed)
+        model.fit(X_scaled)
+        states = model.predict(X_scaled)
+        
+        counts = np.bincount(states, minlength=n_states)
+        # measure imbalance — lower is more even
+        imbalance = counts.max() - counts.min()
+        
+        if imbalance < best_balance:
+            best_balance = imbalance
+            best_model = model
+            best_states = states
+    unique, counts = np.unique(best_states, return_counts=True)
+    p("\n--- HMM State Distribution ---")
+    for state, count in zip(unique, counts):
+        p(f"  State {state}: {count} songs ({count/len(best_states)*100:.1f}%)")
+    return best_model, best_states
 
 def plot_hmm(model, states, df, ax3, ax4,p):
     df = df.copy()
@@ -183,7 +212,7 @@ def plot_hdb(ax5,labels,X):
                 label=f"cluster {label}"
             )
 
-    ax5.set_title("HDBSCAN Clustering\n(PCA space)")
+    ax5.set_title("HDBSCAN Clustering")
     ax5.legend()
 
 def main():
@@ -207,14 +236,14 @@ def main():
         X_scaled = StandardScaler().fit_transform(X)
         X_avg_scaled = StandardScaler().fit_transform(X_avg)
 
-        # PCA for OPTICS only
-        pca = PCA(n_components=0.95)
-        X_pca = pca.fit_transform(X_scaled)
-        p(f"PCA reduced {X_scaled.shape[1]} -> {X_pca.shape[1]} components")
+        # # PCA for OPTICS only
+        # pca = PCA(n_components=0.95)
+        # X_pca = pca.fit_transform(X_scaled)
+        # p(f"PCA reduced {X_scaled.shape[1]} -> {X_pca.shape[1]} components")
 
         # OPTICS on PCA
         clust = OPTICS(min_samples=3, metric='minkowski',xi=0.04)
-        clust.fit(X_pca)
+        clust.fit(X_scaled)
         cluster_labels = clust.labels_          # original order — for df
         ordered_labels = clust.labels_[clust.ordering_]  # for reachability plot
 
@@ -222,8 +251,8 @@ def main():
         MIN_SONGS_HMM = 10
         run_hmm = len(segments) >= MIN_SONGS_HMM
         if run_hmm:
-            n_states = 4 if len(segments) >= 30 else 3
-            model, states = fit_hmm(X_avg_scaled, n_states=n_states)
+            n_states = 5 if len(segments) > 20 else 3
+            model, states = fit_hmm_best(X_avg_scaled,p,n_states=n_states)
         else:
             p(f"Too few segments ({len(segments)}) for HMM, skipping")
 
@@ -231,13 +260,13 @@ def main():
         df = all_labels.copy()
         df = df.iloc[:len(cluster_labels)].copy()
         label_map = {
-            "None": 0, "dont like": -1, "Dont like": -1,
+            "None": 0, "dont like": -1, "Dont like": -1, 
             "okay": 1, "Okay": 1, "likes": 2, "Likes": 2,
             "Nan": 0, "like": 2, "Like": 2, "yes": 2, "no": -1, "ok": 1
         }
         knows_map = {
-            "Know": 2, "Knows": 2, "dont know": 0,
-            "Dont know": 0, "Dont know ": 0,
+            "Know": 2, "Knows": 2, "know":2,
+            "dont know": 0,"Dont know": 0, "Dont know ": 0,"don't know":0,
             "Familar": 1, "familar": 1
         }
         df["Likes_num"] = df["Likes"].map(label_map)
@@ -245,7 +274,7 @@ def main():
         df["cluster"] = cluster_labels
 
         # plots
-        space = np.arange(len(X_pca))
+        space = np.arange(len(X_scaled))
         reachability = clust.reachability_[clust.ordering_]
 
         plt.figure(figsize=(14, 7))
@@ -268,12 +297,6 @@ def main():
         ax1.set_ylabel("Reachability (epsilon distance)")
         ax1.set_title("Reachability Plot")
 
-        # OPTICS scatter on first 2 PCA components
-        for klass, color in enumerate(colors):
-            Xk = X_pca[cluster_labels == klass]
-            ax2.plot(Xk[:, 0], Xk[:, 1], color, alpha=0.3)
-        ax2.plot(X_pca[cluster_labels == -1, 0], X_pca[cluster_labels == -1, 1], "k+", alpha=0.3)
-        ax2.set_title("OPTICS Clustering\n(PCA space)")
 
         # HMM plots
         if run_hmm:
@@ -287,8 +310,30 @@ def main():
             label = "noise" if cluster_id == -1 else cluster_id
             p(f"\n=== Cluster {label} ===")
             p(group.sort_values("Song #")[["Song #", "Song name", "Likes", "Knows"]])
-        hdb_labels = hdb_fit(X_pca)
-        plot_hdb(ax5,hdb_labels,X_pca)
+        hdb_labels = hdb_fit(X_scaled)
+
+        pca_viz = PCA(n_components=2)
+        X_viz = pca_viz.fit_transform(X_scaled)
+
+        # then in scatter
+        for klass, color in enumerate(colors):
+            Xk = X_viz[cluster_labels == klass]
+            ax2.plot(Xk[:, 0], Xk[:, 1], color, alpha=0.3)
+        ax2.plot(X_viz[cluster_labels == -1, 0], X_viz[cluster_labels == -1, 1], "k+", alpha=0.3)
+
+        # and for hdbscan
+        plot_hdb(ax5, hdb_labels, X_viz)  # pass X_viz not X_scaled
+        # Hdb cluster  report 
+        df["hdb_cluster"] = hdb_labels
+        p("\n--- HDBSCAN Results ---")
+        df_hdb_valid = df[df["hdb_cluster"] != -1]
+        p(df_hdb_valid.groupby("hdb_cluster")[["Likes_num", "Knows_num"]].mean())
+        for cluster_id, group in df.groupby("hdb_cluster"):
+            label = "noise" if cluster_id == -1 else cluster_id
+            p(f"\n=== HDBSCAN Cluster {label} ===")
+            p(group.sort_values("Song #")[["Song #", "Song name", "Likes", "Knows"]])
+
+        #finish up
         plt.tight_layout()
         plt.savefig(f"./algorithm/plots/{name}_plot.png")
         plt.show()
