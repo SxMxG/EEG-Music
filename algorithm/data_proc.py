@@ -184,6 +184,36 @@ def plot_hmm(model, states, df, ax3, ax4,p):
         p(f"\n=== HMM State {state} ===")
         p(group[["Song #", "Song name", "Likes", "Knows"]])
 
+def interpret_hmm_states(model, states, segments, p, sfreq=300):
+    bands = ["delta", "theta", "alpha", "beta", "gamma"]
+    regions = ["frontal", "central", "parietal"]
+    
+    # build column names matching feature order
+    cols = [f"{band}_{region}" for band in bands for region in regions]
+    
+    # build feature matrix
+    X_avg = np.array([extract_band_power_avg(seg, sfreq) for seg in segments])
+    
+    # normalize so we can compare relative activation
+    X_norm = StandardScaler().fit_transform(X_avg)
+    
+    df_features = pd.DataFrame(X_norm, columns=cols)
+    df_features["hmm_state"] = states
+    
+    summary = df_features.groupby("hmm_state").mean()
+    
+    p("\n--- HMM State Brain Pattern (z-scored, higher = more active) ---")
+    p(summary.round(3).to_string())
+    
+    # print interpretation per state
+    p("\n--- State Interpretations ---")
+    for state in sorted(df_features["hmm_state"].unique()):
+        row = summary.loc[state]
+        top = row.nlargest(3)
+        bottom = row.nsmallest(3)
+        p(f"\nState {state}:")
+        p(f"  Most active:   {', '.join([f'{k} ({v:.2f})' for k,v in top.items()])}")
+        p(f"  Least active:  {', '.join([f'{k} ({v:.2f})' for k,v in bottom.items()])}")
 def hdb_fit(X_scaled):
     hdb = HDBSCAN(min_samples=3,min_cluster_size=3)
     hdb.fit(X_scaled)
@@ -255,7 +285,7 @@ def main():
         MIN_SONGS_HMM = 10
         run_hmm = len(segments) >= MIN_SONGS_HMM
         if run_hmm:
-            n_states = 7 if len(segments) > 20 else 3
+            n_states = 5 if len(segments) > 20 else 3
             model, states = fit_hmm_best(X_avg_scaled,p,n_states=n_states)
         else:
             p(f"Too few segments ({len(segments)}) for HMM, skipping")
@@ -305,7 +335,7 @@ def main():
         # HMM plots
         if run_hmm:
             plot_hmm(model, states, df, ax3, ax4,p)
-
+        interpret_hmm_states(model,states,segments,p)
         # p cluster info
         p(df)
         df_valid = df[df["cluster"] != -1].copy()

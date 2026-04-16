@@ -54,97 +54,116 @@ Any non-zero: True
   [39] Song #41 | Mr. Brightside                 | Likes: okay       | alpha_avg: 0.000000
 
 --- HMM State Distribution ---
-  State 0: 9 songs (22.5%)
-  State 1: 5 songs (12.5%)
-  State 2: 5 songs (12.5%)
-  State 3: 9 songs (22.5%)
-  State 4: 10 songs (25.0%)
-  State 5: 1 songs (2.5%)
-  State 6: 1 songs (2.5%)
+  State 0: 5 songs (12.5%)
+  State 1: 12 songs (30.0%)
+  State 2: 7 songs (17.5%)
+  State 3: 15 songs (37.5%)
+  State 4: 1 songs (2.5%)
 
 --- HMM State vs Likes/Knows ---
            Likes_num  Knows_num
 hmm_state                      
-0              1.625   0.666667
-1              0.800   0.000000
-2              0.000   0.400000
-3              1.750   0.444444
-4              1.600   0.200000
-5              1.000   0.000000
-6              1.000   0.000000
+0           2.000000   1.200000
+1           1.250000   0.166667
+2           0.571429   0.285714
+3           1.461538   0.266667
+4           1.000000   0.000000
 
 --- Transition Matrix ---
-         →0   →1   →2     →3   →4   →5     →6
-from 0  0.0  0.0  0.0  0.889  0.0  0.0  0.111
-from 1  0.0  0.0  1.0  0.000  0.0  0.0  0.000
-from 2  0.0  0.8  0.0  0.000  0.0  0.2  0.000
-from 3  1.0  0.0  0.0  0.000  0.0  0.0  0.000
-from 4  0.0  0.0  0.1  0.100  0.8  0.0  0.000
-from 5  0.0  1.0  0.0  0.000  0.0  0.0  0.000
-from 6  0.0  0.0  0.0  0.000  1.0  0.0  0.000
+           →0     →1     →2     →3     →4
+from 0  0.600  0.000  0.000  0.400  0.000
+from 1  0.000  0.636  0.182  0.182  0.000
+from 2  0.000  0.285  0.715  0.000  0.000
+from 3  0.133  0.133  0.000  0.667  0.067
+from 4  0.000  1.000  0.000  0.000  0.000
 
 --- Songs per State ---
 
 === HMM State 0 ===
-    Song #          Song name        Likes       Knows
-3        5               军港之夜         okay  don't know
-5        7  sign of the times  don't like   don't know
-7        9     the other side         like  don't know
-9       11        FLY HIGH!!!         like        know
-11      13                 若梦         like        know
-13      15          attention         like  don't know
-15      17      shape of you          like        know
-17      19                 酒歌         okay  don't know
-19      21     if you want to         okay  don't know
+    Song #      Song name Likes       Knows
+9       11    FLY HIGH!!!  like        know
+10      12      fireflies  like        know
+11      13             若梦  like        know
+12      14  kiss me right  like  don't know
+18      20       kiss me   like  don't know
 
 === HMM State 1 ===
-    Song #       Song name      Likes      Knows
-30      32          Afraid  dont like  dont know
-32      34  American Girls       Okay  dont know
-35      37        12 to 12       Okay  dont know
-37      39      white keys      likes  dont know
-39      41  Mr. Brightside       okay  dont know
+    Song #              Song name      Likes       Knows
+1        3          make you mine       like  don't know
+21      23          choosin texas      likes   dont know
+22      24              Stateside      likes   dont know
+23      25              Attention       okay   dont know
+24      26                   Swim      likes   dont know
+25      27  iloveitiloveitiloveit      likes   dont know
+26      28            Man i need        okay   dont know
+28      30            Risk it all      likes       Knows
+30      32                 Afraid  dont like   dont know
+37      39             white keys      likes   dont know
+38      40           body to body  dont like   dont know
+39      41         Mr. Brightside       okay   dont know
 
 === HMM State 2 ===
     Song #            Song name      Likes      Knows
 29      31                 DtMF       okay  dont know
 31      33             War Pigs  dont like  dont know
+32      34       American Girls       Okay  dont know
 33      35             So Easy       likes       know
+34      36           Sky walker       Okay  dont know
+35      37             12 to 12       Okay  dont know
 36      38  Everything i wanted  dont like  dont know
-38      40         body to body  dont like  dont know
 
 === HMM State 3 ===
-    Song #            Song name       Likes       Knows
-2        4             homesick        okay  don't know
-4        6            I'm yours        like  don't know
-6        8               nobody        like        know
-8       10           homecoming  don't like  don't know
-10      12            fireflies        like        know
-12      14        kiss me right        like  don't know
-14      16  when we are younger        like  don't know
-16      18     how much is weed        okay  don't know
-18      20             kiss me         like  don't know
+    Song #            Song name        Likes       Knows
+0        2                  踊 子         okay  don't know
+2        4             homesick         okay  don't know
+3        5                 军港之夜         okay  don't know
+4        6            I'm yours         like  don't know
+5        7    sign of the times  don't like   don't know
+6        8               nobody         like        know
+7        9       the other side         like  don't know
+8       10           homecoming   don't like  don't know
+13      15            attention         like  don't know
+14      16  when we are younger         like  don't know
+15      17        shape of you          like        know
+16      18     how much is weed         okay  don't know
+17      19                   酒歌         okay  don't know
+19      21       if you want to         okay  don't know
+27      29                  E85         okay   dont know
 
 === HMM State 4 ===
-    Song #              Song name  Likes       Knows
-0        2                    踊 子   okay  don't know
-1        3          make you mine   like  don't know
-21      23          choosin texas  likes   dont know
-22      24              Stateside  likes   dont know
-23      25              Attention   okay   dont know
-24      26                   Swim  likes   dont know
-25      27  iloveitiloveitiloveit  likes   dont know
-26      28            Man i need    okay   dont know
-27      29                    E85   okay   dont know
-28      30            Risk it all  likes       Knows
-
-=== HMM State 5 ===
-    Song #   Song name Likes      Knows
-34      36  Sky walker  Okay  dont know
-
-=== HMM State 6 ===
     Song # Song name Likes      Knows
 20      22  babydoll  okay  dont know
+
+--- HMM State Brain Pattern (z-scored, higher = more active) ---
+           delta_frontal  delta_central  delta_parietal  theta_frontal  theta_central  theta_parietal  alpha_frontal  alpha_central  alpha_parietal  beta_frontal  beta_central  beta_parietal  gamma_frontal  gamma_central  gamma_parietal
+hmm_state                                                                                                                                                                                                                                   
+0                 -0.449          0.084           1.547         -0.498          0.152           0.789          1.081          1.345           1.035        -0.227         0.990          0.878          0.000          1.809           2.008
+1                 -0.104         -0.093          -0.208         -0.361         -0.812          -0.902         -1.037         -0.804          -0.747        -0.351        -0.297         -0.195         -0.253          0.079          -0.336
+2                  1.464         -0.240          -0.282          1.603         -0.388          -0.689          0.386         -0.704          -0.527         1.468        -0.244          0.081          1.093         -0.774          -0.977
+3                 -0.514         -0.247          -0.241         -0.451          0.504           0.686          0.354          0.608           0.629        -0.323         0.061         -0.115         -0.341         -0.372          -0.017
+4                  0.950          6.082           0.339          2.362          4.145           1.421         -0.979         -1.269          -1.955        -0.095        -0.599         -0.894          0.509          0.997           1.081
+
+--- State Interpretations ---
+
+State 0:
+  Most active:   gamma_parietal (2.01), gamma_central (1.81), delta_parietal (1.55)
+  Least active:  theta_frontal (-0.50), delta_frontal (-0.45), beta_frontal (-0.23)
+
+State 1:
+  Most active:   gamma_central (0.08), delta_central (-0.09), delta_frontal (-0.10)
+  Least active:  alpha_frontal (-1.04), theta_parietal (-0.90), theta_central (-0.81)
+
+State 2:
+  Most active:   theta_frontal (1.60), beta_frontal (1.47), delta_frontal (1.46)
+  Least active:  gamma_parietal (-0.98), gamma_central (-0.77), alpha_central (-0.70)
+
+State 3:
+  Most active:   theta_parietal (0.69), alpha_parietal (0.63), alpha_central (0.61)
+  Least active:  delta_frontal (-0.51), theta_frontal (-0.45), gamma_central (-0.37)
+
+State 4:
+  Most active:   delta_central (6.08), theta_central (4.15), theta_frontal (2.36)
+  Least active:  alpha_parietal (-1.95), alpha_central (-1.27), alpha_frontal (-0.98)
     Song #              Song name        Likes       Knows  Likes_num  Knows_num  cluster
 0        2                    踊 子         okay  don't know        1.0          0       -1
 1        3          make you mine         like  don't know        2.0          0        2
