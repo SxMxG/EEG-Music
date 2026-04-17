@@ -1,5 +1,46 @@
 loaded algorithm\segments\Yichen_segments.npy with 60 segments
 loaded algorithm\tables\Yichen_song_list.csv with 60 labels
+                     song                    artist                                          genres  popularity
+0                Babydoll              Dominic Fike                                              []         100
+1           choosin texas              Ella Langley                                       [country]          94
+2               stateside            PinkPantheress                                   [bedroom pop]          98
+3                    Swim                       BTS                                         [k-pop]          99
+4   iloveitiloveitiloveit                 Bella Kay                                              []          95
+5              Man I need               Olivia Dean                                      [pop soul]          98
+6                     E85               Don Toliver                                              []          92
+7             risk it all                Bruno Mars                                              []          97
+8                    DtMF                 Bad Bunny  [reggaeton, trap latino, latin, urbano latino]          99
+9          American Girls              Harry Styles                                              []          94
+10                So Easy               Olivia Dean                                      [pop soul]          98
+11           Body to body                       BTS                                         [k-pop]          96
+12             White Keys              Dominic Fike                                              []          94
+13         Mr. Brightside               The Killers                              [alternative rock]          93
+14                   Body               Don Toliver                                              []          90
+15       End of Beginning                       Djo                                              []          98
+16    werent for the wind              Ella Langley                                       [country]          71
+17                 Golden                   HUNTR/X                                              []          95
+18                    Fya                       BTS                                         [k-pop]          95
+19               Hooligan                       BTS                                         [k-pop]          95
+20    Where is my husband                      RAYE                                              []          95
+21      Black Quarterback               Death Grips            [experimental hip hop, experimental]          42
+22                  我们的歌谣                      凤凰传奇      [gufeng, c-pop, mandopop, chinese hip hop]          24
+23          Feelin Lovely           Connan Mockasin                                              []          53
+24   When we were younger                      SOJA             [reggae, roots reggae, reggae rock]          49
+25                Kiss me  Sixpence None The Richer                                              []          87
+26              Attention              Charlie Puth                                      [soft pop]          88
+27                     嗵嗵                    DOUDOU    [chinese indie, gufeng, chinese rock, c-pop]          47
+28                   东北民谣                  Mao Buyi                       [gufeng, c-pop, mandopop]          43
+29      How much is weed?              Dominic Fike                                              []          76
+30          Kiss of Venus            Paul McCartney                                              []          51
+31                   梅花三弄            Chiang Yu-Heng                                      [mandopop]          38
+32                  Bang!                       AJR                                              []          73
+33            Fly high!!!         BURNOUT SYNDROMES                          [anime, j-rock, j-pop]          66
+34              Roommates              Malcolm Todd                                              []          85
+35                     酒歌                   Hanggai       [chinese rock, folk metal, chinese indie]          12
+36                   南屏晚钟                 Tsai Chin      [mandopop, taiwanese pop, c-pop, cantopop]          34
+37               the show               Lupe Fiasco                                              []          75
+38              Good Time              Alan Jackson   [country, country christian, classic country]          70
+39             STYX HELIX               MYTH & ROID                          [anime, j-rock, j-pop]          61
 freqs range: 0.00 - 150.00
 alpha idx: (array([16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]),)
 features shape: (35,)
@@ -164,6 +205,38 @@ State 3:
 State 4:
   Most active:   delta_parietal (4.01), delta_frontal (3.42), delta_central (2.88)
   Least active:  theta_central (-1.36), theta_parietal (-1.06), alpha_parietal (-0.83)
+
+--- Spotify Analysis per HMM State ---
+
+=== State 0 ===
+  Top genres: {'mandopop': np.int64(2), 'anime': np.int64(2), 'j-pop': np.int64(2), 'j-rock': np.int64(2), 'k-pop': np.int64(1)}
+  Avg popularity: 66.5/100
+  Avg likes: 1.00 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'Olivia Dean': np.int64(1), 'BTS': np.int64(1), 'Djo': np.int64(1)}
+
+=== State 1 ===
+  Top genres: {'gufeng': np.int64(2), 'c-pop': np.int64(2), 'mandopop': np.int64(2), 'chinese hip hop': np.int64(1)}
+  Avg popularity: 55.7/100
+  Avg likes: 1.33 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'Dominic Fike': np.int64(1), '凤凰传奇': np.int64(1), 'Mao Buyi': np.int64(1)}
+
+=== State 2 ===
+  Top genres: {'k-pop': np.int64(3), 'country': np.int64(1), 'reggaeton': np.int64(1), 'trap latino': np.int64(1), 'latin': np.int64(1)}
+  Avg popularity: 94.3/100
+  Avg likes: 0.73 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'BTS': np.int64(3), 'Don Toliver': np.int64(2), 'Ella Langley': np.int64(1)}
+
+=== State 3 ===
+  Top genres: {'bedroom pop': np.int64(1), 'pop soul': np.int64(1), 'alternative rock': np.int64(1), 'experimental hip hop': np.int64(1), 'experimental': np.int64(1)}
+  Avg popularity: 74.0/100
+  Avg likes: 1.33 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'Dominic Fike': np.int64(2), 'PinkPantheress': np.int64(1), 'Olivia Dean': np.int64(1)}
+
+=== State 4 ===
+  Top genres: {}
+  Avg popularity: 85.0/100
+  Avg likes: 1.50 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'HUNTR/X': np.int64(1), 'Lupe Fiasco': np.int64(1)}
     Song #              Song name      Likes      Knows  Likes_num  Knows_num  cluster
 0       21               Babydoll       Okay  Dont know          1         -1       -1
 1       22          choosin texas       okay       Know          1          2        0

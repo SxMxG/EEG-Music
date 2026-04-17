@@ -1,5 +1,46 @@
 loaded algorithm\segments\Tina_segments.npy with 41 segments
 loaded algorithm\tables\Tina_song_list.csv with 41 labels
+                     song                    artist                                             genres  popularity
+0                     踊 子                    Vaundy                    [j-pop, japanese indie, j-rock]          73
+1           make you mine              Madison Beer                                                 []          77
+2                homesick              Phil Wickham                          [worship, christian, ccm]          56
+3                    军港之夜                       苏小明                                                 []          14
+4               I'm yours                Jason Mraz                           [soft pop, acoustic pop]          79
+5       sign of the times              Harry Styles                                                 []          91
+6                  nobody         Sabrina Carpenter                                              [pop]          85
+7          the other side              Hugh Jackman                                         [musicals]          76
+8              homecoming                Kanye West                                              [rap]          86
+9             FLY HIGH!!!         BURNOUT SYNDROMES                             [anime, j-rock, j-pop]          66
+10              fireflies                  Owl City                                                 []          81
+11                     若梦                 Zhou Shen                          [gufeng, c-pop, mandopop]          38
+12          kiss me right                     keshi                                                 []          63
+13              attention              Charlie Puth                                         [soft pop]          88
+14    when we are younger               Younger Sun                                                 []          16
+15          shape of you                 Ed Sheeran                                         [soft pop]          91
+16       how much is weed              Dominic Fike                                                 []          76
+17                     酒歌                   Hanggai          [chinese rock, folk metal, chinese indie]          12
+18               kiss me   Sixpence None The Richer                                                 []          87
+19         if you want to               beabadoobee                                      [bedroom pop]          68
+20               babydoll              Dominic Fike                                                 []         100
+21          choosin texas              Ella Langley                                          [country]          94
+22              Stateside            PinkPantheress                                      [bedroom pop]          98
+23              Attention              Charlie Puth                                         [soft pop]          88
+24                   Swim                       BTS                                            [k-pop]          99
+25  iloveitiloveitiloveit                 Bella Kay                                                 []          95
+26            Man i need                Olivia Dean                                         [pop soul]          98
+27                    E85               Don Toliver                                                 []          92
+28            Risk it all                Bruno Mars                                                 []          97
+29                   DtMF                 Bad Bunny     [reggaeton, trap latino, latin, urbano latino]          99
+30                 Afraid       Motionless In White                                 [metalcore, metal]          79
+31               War Pigs             Black Sabbath  [metal, heavy metal, rock, stoner rock, doom m...          66
+32         American Girls              Harry Styles                                                 []          94
+33               So Easy                Olivia Dean                                         [pop soul]          98
+34             Sky walker                    Miguel                                              [r&b]          79
+35               12 to 12                     sombr                                                 []          92
+36    Everything i wanted             Billie Eilish                                                 []          84
+37             white keys              Dominic Fike                                                 []          94
+38           body to body                       BTS                                            [k-pop]          96
+39         Mr. Brightside               The Killers                                 [alternative rock]          93
 freqs range: 0.00 - 150.00
 alpha idx: (array([16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]),)
 features shape: (35,)

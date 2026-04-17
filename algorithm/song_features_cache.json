@@ -1,0 +1,550 @@
+{
+  "Babydoll": {
+    "song": "Babydoll",
+    "artist": "Dominic Fike",
+    "genres": [],
+    "popularity": 100
+  },
+  "choosin texas": {
+    "song": "choosin texas",
+    "artist": "Ella Langley",
+    "genres": [
+      "country"
+    ],
+    "popularity": 94
+  },
+  "stateside": {
+    "song": "stateside",
+    "artist": "PinkPantheress",
+    "genres": [
+      "bedroom pop"
+    ],
+    "popularity": 98
+  },
+  "Swim": {
+    "song": "Swim",
+    "artist": "BTS",
+    "genres": [
+      "k-pop"
+    ],
+    "popularity": 99
+  },
+  "iloveitiloveitiloveit": {
+    "song": "iloveitiloveitiloveit",
+    "artist": "Bella Kay",
+    "genres": [],
+    "popularity": 95
+  },
+  "Man I need": {
+    "song": "Man I need",
+    "artist": "Olivia Dean",
+    "genres": [
+      "pop soul"
+    ],
+    "popularity": 98
+  },
+  "E85": {
+    "song": "E85",
+    "artist": "Don Toliver",
+    "genres": [],
+    "popularity": 92
+  },
+  "risk it all": {
+    "song": "risk it all",
+    "artist": "Bruno Mars",
+    "genres": [],
+    "popularity": 97
+  },
+  "DtMF": {
+    "song": "DtMF",
+    "artist": "Bad Bunny",
+    "genres": [
+      "reggaeton",
+      "trap latino",
+      "latin",
+      "urbano latino"
+    ],
+    "popularity": 99
+  },
+  "American Girls": {
+    "song": "American Girls",
+    "artist": "Harry Styles",
+    "genres": [],
+    "popularity": 94
+  },
+  "So Easy": {
+    "song": "So Easy",
+    "artist": "Olivia Dean",
+    "genres": [
+      "pop soul"
+    ],
+    "popularity": 98
+  },
+  "Body to body": {
+    "song": "Body to body",
+    "artist": "BTS",
+    "genres": [
+      "k-pop"
+    ],
+    "popularity": 96
+  },
+  "White Keys": {
+    "song": "White Keys",
+    "artist": "Dominic Fike",
+    "genres": [],
+    "popularity": 94
+  },
+  "Mr. Brightside": {
+    "song": "Mr. Brightside",
+    "artist": "The Killers",
+    "genres": [
+      "alternative rock"
+    ],
+    "popularity": 93
+  },
+  "Body": {
+    "song": "Body",
+    "artist": "Don Toliver",
+    "genres": [],
+    "popularity": 90
+  },
+  "End of Beginning": {
+    "song": "End of Beginning",
+    "artist": "Djo",
+    "genres": [],
+    "popularity": 98
+  },
+  "werent for the wind": {
+    "song": "werent for the wind",
+    "artist": "Ella Langley",
+    "genres": [
+      "country"
+    ],
+    "popularity": 71
+  },
+  "Golden": {
+    "song": "Golden",
+    "artist": "HUNTR/X",
+    "genres": [],
+    "popularity": 95
+  },
+  "Fya": {
+    "song": "Fya",
+    "artist": "BTS",
+    "genres": [
+      "k-pop"
+    ],
+    "popularity": 95
+  },
+  "Hooligan": {
+    "song": "Hooligan",
+    "artist": "BTS",
+    "genres": [
+      "k-pop"
+    ],
+    "popularity": 95
+  },
+  "Where is my husband": {
+    "song": "Where is my husband",
+    "artist": "RAYE",
+    "genres": [],
+    "popularity": 95
+  },
+  "Black Quarterback": {
+    "song": "Black Quarterback",
+    "artist": "Death Grips",
+    "genres": [
+      "experimental hip hop",
+      "experimental"
+    ],
+    "popularity": 42
+  },
+  "我们的歌谣": {
+    "song": "我们的歌谣",
+    "artist": "凤凰传奇",
+    "genres": [
+      "gufeng",
+      "c-pop",
+      "mandopop",
+      "chinese hip hop"
+    ],
+    "popularity": 24
+  },
+  "Feelin Lovely": {
+    "song": "Feelin Lovely",
+    "artist": "Connan Mockasin",
+    "genres": [],
+    "popularity": 53
+  },
+  "When we were younger": {
+    "song": "When we were younger",
+    "artist": "SOJA",
+    "genres": [
+      "reggae",
+      "roots reggae",
+      "reggae rock"
+    ],
+    "popularity": 49
+  },
+  "Kiss me": {
+    "song": "Kiss me",
+    "artist": "Sixpence None The Richer",
+    "genres": [],
+    "popularity": 87
+  },
+  "Attention": {
+    "song": "Attention",
+    "artist": "Charlie Puth",
+    "genres": [
+      "soft pop"
+    ],
+    "popularity": 88
+  },
+  "嗵嗵": {
+    "song": "嗵嗵",
+    "artist": "DOUDOU",
+    "genres": [
+      "chinese indie",
+      "gufeng",
+      "chinese rock",
+      "c-pop"
+    ],
+    "popularity": 47
+  },
+  "东北民谣": {
+    "song": "东北民谣",
+    "artist": "Mao Buyi",
+    "genres": [
+      "gufeng",
+      "c-pop",
+      "mandopop"
+    ],
+    "popularity": 43
+  },
+  "How much is weed?": {
+    "song": "How much is weed?",
+    "artist": "Dominic Fike",
+    "genres": [],
+    "popularity": 76
+  },
+  "Kiss of Venus": {
+    "song": "Kiss of Venus",
+    "artist": "Paul McCartney",
+    "genres": [],
+    "popularity": 51
+  },
+  "梅花三弄": {
+    "song": "梅花三弄",
+    "artist": "Chiang Yu-Heng",
+    "genres": [
+      "mandopop"
+    ],
+    "popularity": 38
+  },
+  "Bang!": {
+    "song": "Bang!",
+    "artist": "AJR",
+    "genres": [],
+    "popularity": 73
+  },
+  "Fly high!!!": {
+    "song": "Fly high!!!",
+    "artist": "BURNOUT SYNDROMES",
+    "genres": [
+      "anime",
+      "j-rock",
+      "j-pop"
+    ],
+    "popularity": 66
+  },
+  "Roommates": {
+    "song": "Roommates",
+    "artist": "Malcolm Todd",
+    "genres": [],
+    "popularity": 85
+  },
+  "酒歌": {
+    "song": "酒歌",
+    "artist": "Hanggai",
+    "genres": [
+      "chinese rock",
+      "folk metal",
+      "chinese indie"
+    ],
+    "popularity": 12
+  },
+  "南屏晚钟": {
+    "song": "南屏晚钟",
+    "artist": "Tsai Chin",
+    "genres": [
+      "mandopop",
+      "taiwanese pop",
+      "c-pop",
+      "cantopop"
+    ],
+    "popularity": 34
+  },
+  "the show": {
+    "song": "the show",
+    "artist": "Lupe Fiasco",
+    "genres": [],
+    "popularity": 75
+  },
+  "Good Time": {
+    "song": "Good Time",
+    "artist": "Alan Jackson",
+    "genres": [
+      "country",
+      "country christian",
+      "classic country"
+    ],
+    "popularity": 70
+  },
+  "STYX HELIX": {
+    "song": "STYX HELIX",
+    "artist": "MYTH & ROID",
+    "genres": [
+      "anime",
+      "j-rock",
+      "j-pop"
+    ],
+    "popularity": 61
+  },
+  "踊 子": {
+    "song": "踊 子",
+    "artist": "Vaundy",
+    "genres": [
+      "j-pop",
+      "japanese indie",
+      "j-rock"
+    ],
+    "popularity": 73
+  },
+  "make you mine": {
+    "song": "make you mine",
+    "artist": "Madison Beer",
+    "genres": [],
+    "popularity": 77
+  },
+  "homesick": {
+    "song": "homesick",
+    "artist": "Phil Wickham",
+    "genres": [
+      "worship",
+      "christian",
+      "ccm"
+    ],
+    "popularity": 56
+  },
+  "军港之夜": {
+    "song": "军港之夜",
+    "artist": "苏小明",
+    "genres": [],
+    "popularity": 14
+  },
+  "I'm yours": {
+    "song": "I'm yours",
+    "artist": "Jason Mraz",
+    "genres": [
+      "soft pop",
+      "acoustic pop"
+    ],
+    "popularity": 79
+  },
+  "sign of the times": {
+    "song": "sign of the times",
+    "artist": "Harry Styles",
+    "genres": [],
+    "popularity": 91
+  },
+  "nobody": {
+    "song": "nobody",
+    "artist": "Sabrina Carpenter",
+    "genres": [
+      "pop"
+    ],
+    "popularity": 85
+  },
+  "the other side": {
+    "song": "the other side",
+    "artist": "Hugh Jackman",
+    "genres": [
+      "musicals"
+    ],
+    "popularity": 76
+  },
+  "homecoming": {
+    "song": "homecoming",
+    "artist": "Kanye West",
+    "genres": [
+      "rap"
+    ],
+    "popularity": 86
+  },
+  "FLY HIGH!!!": {
+    "song": "FLY HIGH!!!",
+    "artist": "BURNOUT SYNDROMES",
+    "genres": [
+      "anime",
+      "j-rock",
+      "j-pop"
+    ],
+    "popularity": 66
+  },
+  "fireflies": {
+    "song": "fireflies",
+    "artist": "Owl City",
+    "genres": [],
+    "popularity": 81
+  },
+  "若梦": {
+    "song": "若梦",
+    "artist": "Zhou Shen",
+    "genres": [
+      "gufeng",
+      "c-pop",
+      "mandopop"
+    ],
+    "popularity": 38
+  },
+  "kiss me right": {
+    "song": "kiss me right",
+    "artist": "keshi",
+    "genres": [],
+    "popularity": 63
+  },
+  "attention": {
+    "song": "attention",
+    "artist": "Charlie Puth",
+    "genres": [
+      "soft pop"
+    ],
+    "popularity": 88
+  },
+  "when we are younger": {
+    "song": "when we are younger",
+    "artist": "Younger Sun",
+    "genres": [],
+    "popularity": 16
+  },
+  "shape of you ": {
+    "song": "shape of you ",
+    "artist": "Ed Sheeran",
+    "genres": [
+      "soft pop"
+    ],
+    "popularity": 91
+  },
+  "how much is weed": {
+    "song": "how much is weed",
+    "artist": "Dominic Fike",
+    "genres": [],
+    "popularity": 76
+  },
+  "kiss me ": {
+    "song": "kiss me ",
+    "artist": "Sixpence None The Richer",
+    "genres": [],
+    "popularity": 87
+  },
+  "if you want to": {
+    "song": "if you want to",
+    "artist": "beabadoobee",
+    "genres": [
+      "bedroom pop"
+    ],
+    "popularity": 68
+  },
+  "babydoll": {
+    "song": "babydoll",
+    "artist": "Dominic Fike",
+    "genres": [],
+    "popularity": 100
+  },
+  "Stateside": {
+    "song": "Stateside",
+    "artist": "PinkPantheress",
+    "genres": [
+      "bedroom pop"
+    ],
+    "popularity": 98
+  },
+  "Man i need ": {
+    "song": "Man i need ",
+    "artist": "Olivia Dean",
+    "genres": [
+      "pop soul"
+    ],
+    "popularity": 98
+  },
+  "Risk it all": {
+    "song": "Risk it all",
+    "artist": "Bruno Mars",
+    "genres": [],
+    "popularity": 97
+  },
+  "Afraid": {
+    "song": "Afraid",
+    "artist": "Motionless In White",
+    "genres": [
+      "metalcore",
+      "metal"
+    ],
+    "popularity": 79
+  },
+  "War Pigs": {
+    "song": "War Pigs",
+    "artist": "Black Sabbath",
+    "genres": [
+      "metal",
+      "heavy metal",
+      "rock",
+      "stoner rock",
+      "doom metal",
+      "hard rock"
+    ],
+    "popularity": 66
+  },
+  "So Easy ": {
+    "song": "So Easy ",
+    "artist": "Olivia Dean",
+    "genres": [
+      "pop soul"
+    ],
+    "popularity": 98
+  },
+  "Sky walker": {
+    "song": "Sky walker",
+    "artist": "Miguel",
+    "genres": [
+      "r&b"
+    ],
+    "popularity": 79
+  },
+  "12 to 12": {
+    "song": "12 to 12",
+    "artist": "sombr",
+    "genres": [],
+    "popularity": 92
+  },
+  "Everything i wanted": {
+    "song": "Everything i wanted",
+    "artist": "Billie Eilish",
+    "genres": [],
+    "popularity": 84
+  },
+  "white keys": {
+    "song": "white keys",
+    "artist": "Dominic Fike",
+    "genres": [],
+    "popularity": 94
+  },
+  "body to body": {
+    "song": "body to body",
+    "artist": "BTS",
+    "genres": [
+      "k-pop"
+    ],
+    "popularity": 96
+  }
+}

@@ -10,7 +10,88 @@ from sklearn.cluster import HDBSCAN
 from pathlib import Path
 from tkinter import messagebox
 from hmmlearn import hmm
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+import json
+import time
+sp = spotipy.Spotify(
+    auth_manager=SpotifyClientCredentials(
+        client_id="3f296cfa1bf34a07a382458fcd1082de",
+        client_secret="14306edee8704414ac340f2c714bd308"
+    ),
+)
+def analyze_states_with_spotify(df, df_spotify, states, p):
+    df = df.copy()
+    df["hmm_state"] = states
+    
+    # merge spotify data in
+    df_merged = df.merge(df_spotify, left_on="Song name", right_on="song", how="left")
+    
+    # explode genres so each genre is its own row for counting
+    df_exploded = df_merged.explode("genres")
+    
+    p("\n--- Spotify Analysis per HMM State ---")
+    for state, group in df_merged.groupby("hmm_state"):
+        p(f"\n=== State {state} ===")
+        
+        # top genres
+        state_genres = df_exploded[df_exploded["hmm_state"] == state]["genres"]
+        top_genres = state_genres.value_counts().head(5)
+        p(f"  Top genres: {dict(top_genres)}")
+        
+        # avg popularity
+        avg_pop = group["popularity"].mean()
+        p(f"  Avg popularity: {avg_pop:.1f}/100")
+        
+        # avg likes
+        avg_likes = group["Likes_num"].mean()
+        p(f"  Avg likes: {avg_likes:.2f} (-1=dislike, 1=okay, 2=like)")
+        
+        # artists
+        artists = group["artist"].value_counts().head(3)
+        p(f"  Top artists: {dict(artists)}")
 
+def load_or_fetch_features(song_list, cache_path="song_features_cache.json"):
+    cache_path = Path(cache_path)
+    
+    # load existing cache
+    if cache_path.exists():
+        with open(cache_path, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+    else:
+        cache = {}
+    
+    # only fetch songs not already in cache
+    missing = [s for s in song_list if s not in cache]
+    if missing:
+        print(f"Fetching {len(missing)} new songs from Spotify...")
+        for song in missing:
+            feat = get_song_features(song)
+            cache[song] = feat if feat else {"song": song, "artist": None, "genres": [], "popularity": None}
+            time.sleep(0.5)  # be nice to the API
+        
+        # save updated cache
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+        print(f"Saved cache to {cache_path}")
+    else:
+        print("All songs found in cache, no API calls needed")
+    
+    return [cache[s] for s in song_list]
+def get_song_features(song_name):
+    results = sp.search(q=song_name, type="track", limit=1)
+    if not results["tracks"]["items"]:
+        return None
+    track = results["tracks"]["items"][0]
+    artist_id = track["artists"][0]["id"]
+    artist = sp.artist(artist_id)
+    
+    return {
+        "song": song_name,
+        "artist": track["artists"][0]["name"],
+        "genres": artist["genres"],
+        "popularity": track["popularity"],
+    }
 def verify_alignment(segments, df, p, sfreq=300):
     # add this to verify_alignment temporarily
     seg = segments[0]
@@ -214,7 +295,7 @@ def interpret_hmm_states(model, states, segments, p, sfreq=300):
         p(f"\nState {state}:")
         p(f"  Most active:   {', '.join([f'{k} ({v:.2f})' for k,v in top.items()])}")
         p(f"  Least active:  {', '.join([f'{k} ({v:.2f})' for k,v in bottom.items()])}")
-        
+
 def hdb_fit(X_scaled):
     hdb = HDBSCAN(min_samples=3,min_cluster_size=3)
     hdb.fit(X_scaled)
@@ -262,6 +343,12 @@ def main():
         mask_nan = ~all_labels["Likes"].str.contains("None",na=True)
         mask = mask_dup & mask_skip & mask_nan
         all_labels = all_labels[mask].reset_index(drop=True)
+        song_features = load_or_fetch_features(
+            all_labels["Song name"].tolist(),
+            cache_path="./algorithm/song_features_cache.json"
+        )
+        df_spotify = pd.DataFrame(song_features)
+        p(df_spotify[["song", "artist", "genres", "popularity"]])
         segments = segments[mask.values]
         verify_alignment(segments, all_labels,p)
         # feature matrices
@@ -337,7 +424,8 @@ def main():
         # HMM plots
         if run_hmm:
             plot_hmm(model, states, df, ax3, ax4,p)
-        interpret_hmm_states(model,states,segments,p)
+            interpret_hmm_states(model,states,segments,p)
+            analyze_states_with_spotify(df,df_spotify,states,p)
         # p cluster info
         p(df)
         df_valid = df[df["cluster"] != -1].copy()
