@@ -214,6 +214,7 @@ def interpret_hmm_states(model, states, segments, p, sfreq=300):
         p(f"\nState {state}:")
         p(f"  Most active:   {', '.join([f'{k} ({v:.2f})' for k,v in top.items()])}")
         p(f"  Least active:  {', '.join([f'{k} ({v:.2f})' for k,v in bottom.items()])}")
+        
 def hdb_fit(X_scaled):
     hdb = HDBSCAN(min_samples=3,min_cluster_size=3)
     hdb.fit(X_scaled)
@@ -258,7 +259,8 @@ def main():
         p(f"loaded {table_file} with {len(all_labels)} labels")
         mask_dup = ~all_labels.duplicated(subset="Song name", keep="last")
         mask_skip = ~all_labels["Song name"].str.contains("dont use this one", case=False, na=False)
-        mask = mask_dup & mask_skip
+        mask_nan = ~all_labels["Likes"].str.contains("None",na=True)
+        mask = mask_dup & mask_skip & mask_nan
         all_labels = all_labels[mask].reset_index(drop=True)
         segments = segments[mask.values]
         verify_alignment(segments, all_labels,p)
@@ -294,13 +296,13 @@ def main():
         df = all_labels.copy()
         df = df.iloc[:len(cluster_labels)].copy()
         label_map = {
-            "None": 0, "dont like": -1, "Dont like": -1, 
+            "None": 0, "dont like": -1, "Dont like": -1, "don't like":-1, 
             "okay": 1, "Okay": 1, "likes": 2, "Likes": 2,
             "Nan": 0, "like": 2, "Like": 2, "yes": 2, "no": -1, "ok": 1
         }
         knows_map = {
             "Know": 2, "Knows": 2, "know":2,
-            "dont know": 0,"Dont know": 0, "Dont know ": 0,"don't know":0,
+            "dont know": -1,"Dont know": -1, "Dont know ": -1,"don't know":-1,
             "Familar": 1, "familar": 1
         }
         df["Likes_num"] = df["Likes"].map(label_map)
