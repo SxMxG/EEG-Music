@@ -16,8 +16,8 @@ import json
 import time
 sp = spotipy.Spotify(
     auth_manager=SpotifyClientCredentials(
-        client_id="3f296cfa1bf34a07a382458fcd1082de",
-        client_secret="14306edee8704414ac340f2c714bd308"
+        client_id="clientid",
+        client_secret="secret"
     ),
 )
 def analyze_states_with_spotify(df, df_spotify, states, p):
