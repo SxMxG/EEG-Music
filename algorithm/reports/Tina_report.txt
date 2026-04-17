@@ -205,6 +205,38 @@ State 3:
 State 4:
   Most active:   delta_central (6.08), theta_central (4.15), theta_frontal (2.36)
   Least active:  alpha_parietal (-1.95), alpha_central (-1.27), alpha_frontal (-0.98)
+
+--- Spotify Analysis per HMM State ---
+
+=== State 0 ===
+  Top genres: {'anime': np.int64(1), 'j-rock': np.int64(1), 'j-pop': np.int64(1), 'gufeng': np.int64(1), 'c-pop': np.int64(1)}
+  Avg popularity: 67.0/100
+  Avg likes: 2.00 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'BURNOUT SYNDROMES': np.int64(1), 'Owl City': np.int64(1), 'Zhou Shen': np.int64(1)}
+
+=== State 1 ===
+  Top genres: {'k-pop': np.int64(2), 'country': np.int64(1), 'bedroom pop': np.int64(1), 'soft pop': np.int64(1), 'pop soul': np.int64(1)}
+  Avg popularity: 92.3/100
+  Avg likes: 1.25 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'BTS': np.int64(2), 'Ella Langley': np.int64(1), 'Madison Beer': np.int64(1)}
+
+=== State 2 ===
+  Top genres: {'reggaeton': np.int64(1), 'trap latino': np.int64(1), 'latin': np.int64(1), 'urbano latino': np.int64(1), 'metal': np.int64(1)}
+  Avg popularity: 87.4/100
+  Avg likes: 0.57 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'Bad Bunny': np.int64(1), 'Black Sabbath': np.int64(1), 'Harry Styles': np.int64(1)}
+
+=== State 3 ===
+  Top genres: {'soft pop': np.int64(3), 'japanese indie': np.int64(1), 'j-pop': np.int64(1), 'j-rock': np.int64(1), 'worship': np.int64(1)}
+  Avg popularity: 66.9/100
+  Avg likes: 1.29 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'Vaundy': np.int64(1), 'Phil Wickham': np.int64(1), '苏小明': np.int64(1)}
+
+=== State 4 ===
+  Top genres: {}
+  Avg popularity: 100.0/100
+  Avg likes: 1.00 (-1=dislike, 1=okay, 2=like)
+  Top artists: {'Dominic Fike': np.int64(1)}
     Song #              Song name        Likes       Knows  Likes_num  Knows_num  cluster
 0        2                    踊 子         okay  don't know        1.0         -1       -1
 1        3          make you mine         like  don't know        2.0         -1        2
@@ -343,26 +375,3 @@ hdb_cluster
 32      34  American Girls       Okay  dont know
 33      35        So Easy       likes       know
 35      37        12 to 12       Okay  dont know
-
-=== HDBSCAN Cluster 1 ===
-    Song #          Song name        Likes       Knows
-0        2                踊 子         okay  don't know
-2        4           homesick         okay  don't know
-3        5               军港之夜         okay  don't know
-4        6          I'm yours         like  don't know
-5        7  sign of the times  don't like   don't know
-7        9     the other side         like  don't know
-8       10         homecoming   don't like  don't know
-15      17      shape of you          like        know
-16      18   how much is weed         okay  don't know
-17      19                 酒歌         okay  don't know
-19      21     if you want to         okay  don't know
-27      29                E85         okay   dont know
-
-=== HDBSCAN Cluster 2 ===
-    Song #      Song name  Likes       Knows
-1        3  make you mine   like  don't know
-21      23  choosin texas  likes   dont know
-22      24      Stateside  likes   dont know
-23      25      Attention   okay   dont know
-24      26           Swim  likes   dont know
